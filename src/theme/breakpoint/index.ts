@@ -1,4 +1,4 @@
-import { NumberOrString, Theme } from './index';
+import { NumberOrString, Theme } from '../index';
 
 export const breakpoint = (
     theme: Theme,

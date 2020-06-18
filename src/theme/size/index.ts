@@ -1,4 +1,4 @@
-import { NumberOrString, Theme } from './index';
+import { NumberOrString, Theme } from '../index';
 
 export const size = (theme: Theme, size: NumberOrString): string => {
     if (theme.sizes && theme.sizes[size]) {

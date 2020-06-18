@@ -1,5 +1,5 @@
 import * as CSS from 'csstype';
-import { NumberOrString, Theme } from './index';
+import { NumberOrString, Theme } from '../index';
 
 export const lineHeight = (
     theme: Theme,
