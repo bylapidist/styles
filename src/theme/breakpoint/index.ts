@@ -1,9 +1,9 @@
-import { NumberOrString, Theme } from '../index';
+import { Breakpoint, NumberOrString, Theme } from '../index';
 
 export const breakpoint = (
     theme: Theme,
     breakpoint: NumberOrString
-): string => {
+): Breakpoint => {
     if (theme.breakpoints && theme.breakpoints[breakpoint]) {
         return theme.breakpoints[breakpoint];
     }

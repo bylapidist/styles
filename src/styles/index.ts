@@ -1,5 +1,5 @@
 import * as CSS from 'csstype';
-import { Color, NumberOrString, ThemeObject } from '../theme';
+import { ColorGroup, NumberOrString, ThemeObject } from '../theme';
 
 export interface Styles {
     readonly fontSize?: CSS.FontSizeProperty<NumberOrString>;
@@ -13,13 +13,13 @@ export interface Styles {
     readonly borderRightWidth?: CSS.BorderRightWidthProperty<NumberOrString>;
     readonly borderBottomWidth?: CSS.BorderBottomWidthProperty<NumberOrString>;
     readonly borderLeftWidth?: CSS.BorderLeftWidthProperty<NumberOrString>;
-    readonly borderColor?: Color;
-    readonly borderTopColor?: Color;
-    readonly borderRightColor?: Color;
-    readonly borderBottomColor?: Color;
-    readonly borderLeftColor?: Color;
-    readonly backgroundColor?: Color;
-    readonly textColor?: Color;
+    readonly borderColor?: ColorGroup;
+    readonly borderTopColor?: ColorGroup;
+    readonly borderRightColor?: ColorGroup;
+    readonly borderBottomColor?: ColorGroup;
+    readonly borderLeftColor?: ColorGroup;
+    readonly backgroundColor?: ColorGroup;
+    readonly textColor?: ColorGroup;
     readonly boxShadow?: CSS.BoxShadowProperty;
     readonly width?: CSS.WidthProperty<NumberOrString>;
     readonly minWidth?: CSS.WidthProperty<NumberOrString>;

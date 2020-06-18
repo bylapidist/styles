@@ -41,7 +41,7 @@ test('it retrieves the correct value', () => {
         }
     };
 
-    const values = color(theme, 'base', 'white');
+    const values = color(theme, { group: 'base', shade: 'white' });
 
     expect(values).toEqual('white');
 });
@@ -50,7 +50,7 @@ test('it throws on invalid value', () => {
     const theme: Theme = {};
 
     const values = (): void => {
-        color(theme, 'invalid1', 'invalid2');
+        color(theme, { group: 'invalid1', shade: 'invalid2' });
     };
 
     expect(values).toThrow(

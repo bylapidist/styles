@@ -1,10 +1,9 @@
-import * as CSS from 'csstype';
-import { NumberOrString, Theme } from '../index';
+import { BorderWidth, NumberOrString, Theme } from '../index';
 
 export const borderWidth = (
     theme: Theme,
     borderWidth: NumberOrString
-): CSS.BorderWidthProperty<NumberOrString> => {
+): BorderWidth => {
     if (theme.borderWidths && theme.borderWidths[borderWidth]) {
         return theme.borderWidths[borderWidth];
     }

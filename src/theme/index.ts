@@ -1,32 +1,39 @@
 import * as CSS from 'csstype';
 
 export type ThemeObject<T> = { [K: string]: T };
-
 export type ThemeArray<T> = { [K: string]: T[] };
-
 export type NumberOrString = string | number | 0;
-
-export type Color = { group: NumberOrString; shade: NumberOrString };
+export type AllBreakpoints = string[];
+export type AllMediaQueries = ThemeObject<string>;
+export type BorderRadius = CSS.BorderRadiusProperty<NumberOrString>;
+export type BorderWidth = CSS.BorderWidthProperty<NumberOrString>;
+export type BoxShadow = CSS.BoxShadowProperty;
+export type Breakpoint = string;
+export type ColorGroup = { group: NumberOrString; shade: NumberOrString };
+export type Color = CSS.ColorProperty;
+export type FontFamily = CSS.FontFamilyProperty;
+export type FontSize = CSS.FontSizeProperty<NumberOrString>;
+export type FontWeight = CSS.FontWeightProperty;
+export type LetterSpacing = CSS.LetterSpacingProperty<NumberOrString>;
+export type LineHeight = CSS.LineHeightProperty<NumberOrString>;
+export type Size = string;
+export type Width =
+    | CSS.WidthProperty<NumberOrString>
+    | CSS.HeightProperty<NumberOrString>;
 
 export interface Theme {
-    readonly breakpoints?: ThemeObject<string>;
-    readonly fontSizes?: ThemeObject<CSS.FontSizeProperty<NumberOrString>>;
-    readonly fontFamilies?: ThemeArray<CSS.FontFamilyProperty>;
-    readonly fontWeights?: ThemeObject<CSS.FontWeightProperty>;
-    readonly lineHeights?: ThemeObject<CSS.LineHeightProperty<NumberOrString>>;
-    readonly letterSpacings?: ThemeObject<
-        CSS.LetterSpacingProperty<NumberOrString>
-    >;
-    readonly sizes?: ThemeObject<string>;
-    readonly borderRadii?: ThemeObject<
-        CSS.BorderRadiusProperty<NumberOrString>
-    >;
-    readonly borderWidths?: ThemeObject<
-        CSS.BorderWidthProperty<NumberOrString>
-    >;
-    readonly boxShadows?: ThemeObject<CSS.BoxShadowProperty>;
-    readonly widths?: ThemeObject<string>;
-    readonly colors?: ThemeObject<ThemeObject<CSS.ColorProperty>>;
+    readonly breakpoints?: ThemeObject<Breakpoint>;
+    readonly fontSizes?: ThemeObject<FontSize>;
+    readonly fontFamilies?: ThemeArray<FontFamily>;
+    readonly fontWeights?: ThemeObject<FontWeight>;
+    readonly lineHeights?: ThemeObject<LineHeight>;
+    readonly letterSpacings?: ThemeObject<LetterSpacing>;
+    readonly sizes?: ThemeObject<Size>;
+    readonly borderRadii?: ThemeObject<BorderRadius>;
+    readonly borderWidths?: ThemeObject<BorderWidth>;
+    readonly boxShadows?: ThemeObject<BoxShadow>;
+    readonly widths?: ThemeObject<Width>;
+    readonly colors?: ThemeObject<ThemeObject<Color>>;
 }
 
 export * from './all-breakpoints';

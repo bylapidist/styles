@@ -1,10 +1,9 @@
-import * as CSS from 'csstype';
-import { NumberOrString, Theme } from '../index';
+import { LineHeight, NumberOrString, Theme } from '../index';
 
 export const lineHeight = (
     theme: Theme,
     lineHeight: NumberOrString
-): CSS.LineHeightProperty<NumberOrString> => {
+): LineHeight => {
     if (theme.lineHeights && theme.lineHeights[lineHeight]) {
         return theme.lineHeights[lineHeight];
     }

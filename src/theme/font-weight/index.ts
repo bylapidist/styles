@@ -1,10 +1,9 @@
-import * as CSS from 'csstype';
-import { NumberOrString, Theme } from '../index';
+import { FontWeight, NumberOrString, Theme } from '../index';
 
 export const fontWeight = (
     theme: Theme,
     fontWeight: NumberOrString
-): CSS.FontWeightProperty => {
+): FontWeight => {
     if (theme.fontWeights && theme.fontWeights[fontWeight]) {
         return theme.fontWeights[fontWeight];
     }
