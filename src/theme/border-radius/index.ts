@@ -1,10 +1,9 @@
-import * as CSS from 'csstype';
-import { NumberOrString, Theme } from '../index';
+import { BorderRadius, NumberOrString, Theme } from '../index';
 
 export const borderRadius = (
     theme: Theme,
     borderRadius: NumberOrString
-): CSS.BorderRadiusProperty<NumberOrString> => {
+): BorderRadius => {
     if (theme.borderRadii && theme.borderRadii[borderRadius]) {
         return theme.borderRadii[borderRadius];
     }

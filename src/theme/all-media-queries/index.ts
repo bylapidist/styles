@@ -1,8 +1,8 @@
-import { Theme, ThemeObject } from '../index';
+import { AllMediaQueries, Theme, ThemeObject } from '../index';
 import { breakpoint } from '../breakpoint';
 import { allBreakpoints } from '../all-breakpoints';
 
-export const allMediaQueries = (theme: Theme): ThemeObject<string> => {
+export const allMediaQueries = (theme: Theme): AllMediaQueries => {
     if (theme.breakpoints) {
         const allBps = allBreakpoints(theme);
         const allMediaQueries: ThemeObject<string> = {};

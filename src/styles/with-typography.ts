@@ -1,6 +1,5 @@
 import { Styles } from './index';
 import {
-    color,
     fontFamily,
     fontSize,
     fontWeight,
@@ -41,16 +40,6 @@ export const withTypography = (theme: Theme, styles?: Styles): string =>
                 ? `letter-spacing: ${letterSpacing(
                       theme,
                       styles.letterSpacing
-                  )};`
-                : ''
-        }
-
-        ${
-            styles.textColor
-                ? `color: ${color(
-                      theme,
-                      styles.textColor.group,
-                      styles.textColor.shade
                   )};`
                 : ''
         }

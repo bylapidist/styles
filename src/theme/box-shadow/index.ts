@@ -1,10 +1,9 @@
-import * as CSS from 'csstype';
-import { NumberOrString, Theme } from '../index';
+import { BoxShadow, NumberOrString, Theme } from '../index';
 
 export const boxShadow = (
     theme: Theme,
     boxShadow: NumberOrString
-): CSS.BoxShadowProperty => {
+): BoxShadow => {
     if (theme.boxShadows && theme.boxShadows[boxShadow]) {
         return theme.boxShadows[boxShadow];
     }

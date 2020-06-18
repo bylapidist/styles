@@ -1,10 +1,6 @@
-import * as CSS from 'csstype';
-import { NumberOrString, Theme } from '../index';
+import { NumberOrString, Theme, Width } from '../index';
 
-export const width = (
-    theme: Theme,
-    width: NumberOrString
-): CSS.WidthProperty<NumberOrString> => {
+export const width = (theme: Theme, width: NumberOrString): Width => {
     if (theme.widths && theme.widths[width]) {
         return theme.widths[width];
     }

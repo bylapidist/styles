@@ -1,6 +1,6 @@
-import { Theme } from '../index';
+import { AllBreakpoints, Theme } from '../index';
 
-export const allBreakpoints = (theme: Theme): string[] => {
+export const allBreakpoints = (theme: Theme): AllBreakpoints => {
     if (theme.breakpoints) {
         return Object.keys(theme.breakpoints);
     }

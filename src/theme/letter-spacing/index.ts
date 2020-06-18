@@ -1,10 +1,9 @@
-import * as CSS from 'csstype';
-import { NumberOrString, Theme } from '../index';
+import { LetterSpacing, NumberOrString, Theme } from '../index';
 
 export const letterSpacing = (
     theme: Theme,
     letterSpacing: NumberOrString
-): CSS.LetterSpacingProperty<NumberOrString> => {
+): LetterSpacing => {
     if (theme.letterSpacings && theme.letterSpacings[letterSpacing]) {
         return theme.letterSpacings[letterSpacing];
     }

@@ -1,10 +1,6 @@
-import * as CSS from 'csstype';
-import { NumberOrString, Theme } from '../index';
+import { FontSize, NumberOrString, Theme } from '../index';
 
-export const fontSize = (
-    theme: Theme,
-    size: NumberOrString
-): CSS.FontSizeProperty<NumberOrString> => {
+export const fontSize = (theme: Theme, size: NumberOrString): FontSize => {
     if (theme.fontSizes && theme.fontSizes[size]) {
         return theme.fontSizes[size];
     }

@@ -1,14 +1,15 @@
-import * as CSS from 'csstype';
-import { NumberOrString, Theme } from '../index';
+import { Color, ColorGroup, Theme } from '../index';
 
-export const color = (
-    theme: Theme,
-    group: NumberOrString,
-    shade: NumberOrString
-): CSS.ColorProperty => {
-    if (theme.colors && theme.colors[group] && theme.colors[group][shade]) {
-        return theme.colors[group][shade];
+export const color = (theme: Theme, color: ColorGroup): Color => {
+    if (
+        theme.colors &&
+        theme.colors[color.group] &&
+        theme.colors[color.group][color.shade]
+    ) {
+        return theme.colors[color.group][color.shade];
     }
 
-    throw new Error(`${group} or ${shade} does not exist on theme.colors`);
+    throw new Error(
+        `${color.group} or ${color.shade} does not exist on theme.colors`
+    );
 };

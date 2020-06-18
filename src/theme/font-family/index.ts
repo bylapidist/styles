@@ -1,10 +1,9 @@
-import * as CSS from 'csstype';
-import { NumberOrString, Theme } from '../index';
+import { FontFamily, NumberOrString, Theme } from '../index';
 
 export const fontFamily = (
     theme: Theme,
     fontFamily: NumberOrString
-): CSS.FontFamilyProperty => {
+): FontFamily => {
     if (theme.fontFamilies && theme.fontFamilies[fontFamily]) {
         return theme.fontFamilies[fontFamily].join(', ');
     }
