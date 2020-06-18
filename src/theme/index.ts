@@ -2,6 +2,8 @@ import * as CSS from 'csstype';
 
 export type ThemeObject<T> = { [K: string]: T };
 export type ThemeArray<T> = { [K: string]: T[] };
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type AnyThemeObject = ThemeObject<any> | undefined;
 export type NumberOrString = string | number | 0;
 export type AllBreakpoints = string[];
 export type AllMediaQueries = ThemeObject<string>;
@@ -34,6 +36,7 @@ export interface Theme {
     readonly boxShadows?: ThemeObject<BoxShadow>;
     readonly widths?: ThemeObject<Width>;
     readonly colors?: ThemeObject<ThemeObject<Color>>;
+    [k: string]: AnyThemeObject;
 }
 
 export * from './all-breakpoints';
@@ -46,6 +49,7 @@ export * from './color';
 export * from './font-family';
 export * from './font-size';
 export * from './font-weight';
+export * from './get-property';
 export * from './letter-spacing';
 export * from './line-height';
 export * from './size';
