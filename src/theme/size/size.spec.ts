@@ -1,0 +1,42 @@
+import { size, Theme } from '../index';
+
+test('it retrieves the correct value', () => {
+    const theme: Theme = {
+        sizes: {
+            '0': '0',
+            '1': '0.25rem',
+            '2': '0.5rem',
+            '3': '0.75rem',
+            '4': '1rem',
+            '5': '1.25rem',
+            '6': '1.5rem',
+            '8': '2rem',
+            '10': '2.5rem',
+            '12': '3rem',
+            '16': '4rem',
+            '20': '5rem',
+            '24': '6rem',
+            '32': '8rem',
+            '40': '10rem',
+            '48': '12rem',
+            '56': '14rem',
+            '64': '16rem',
+            auto: 'auto',
+            px: '1px'
+        }
+    };
+
+    const values = size(theme, '1');
+
+    expect(values).toEqual('0.25rem');
+});
+
+test('it throws on invalid value', () => {
+    const theme: Theme = {};
+
+    const values = (): void => {
+        size(theme, 'invalid');
+    };
+
+    expect(values).toThrow('invalid does not exist on theme.sizes');
+});

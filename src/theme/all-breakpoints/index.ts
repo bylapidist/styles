@@ -1,4 +1,4 @@
-import { Theme } from './index';
+import { Theme } from '../index';
 
 export const allBreakpoints = (theme: Theme): string[] => {
     if (theme.breakpoints) {
