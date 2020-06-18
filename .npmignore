@@ -1,0 +1,17 @@
+.dependabot
+.github
+src
+tsconfig.json
+webpack.config.js
+webpack.analyzer.config.js
+jest.config.js
+.prettierrc.js
+.eslintrc.js
+.editorconfig
+.gitignore
+.npmignore
+.eslintignore
+.lintstagedrc
+.stylelintrc
+coverage
+*.tgz
