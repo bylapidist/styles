@@ -1,7 +1,7 @@
 # @lapidist/styles
 
 ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@lapidist/styles)
-[![npm](https://img.shields.io/npm/v/@lapidist/components)](https://www.npmjs.com/package/@lapidist/styles)
+[![npm](https://img.shields.io/npm/v/@lapidist/styles)](https://www.npmjs.com/package/@lapidist/styles)
 ![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/bylapidist/styles/dev/typescript)
 [![codecov](https://codecov.io/gh/bylapidist/styles/branch/master/graph/badge.svg)](https://codecov.io/gh/bylapidist/styles)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d28f67acb582d5705333/maintainability)](https://codeclimate.com/github/bylapidist/styles/maintainability)
