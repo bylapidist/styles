@@ -1,9 +1,4 @@
-import { NumberOrString, Size, Theme } from '../index';
+import { getProperty, NumberOrString, Size, Theme } from '../index';
 
-export const size = (theme: Theme, size: NumberOrString): Size => {
-    if (theme.sizes && theme.sizes[size]) {
-        return theme.sizes[size];
-    }
-
-    throw new Error(`${size} does not exist on theme.sizes`);
-};
+export const size = (theme: Theme, size: NumberOrString): Size =>
+    getProperty<Size>(theme, 'sizes', size);

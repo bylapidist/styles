@@ -7,7 +7,7 @@ export const getProperty = <T>(
 ): T => {
     const propertyGroup: AnyThemeObject = theme[property];
 
-    if (propertyGroup) {
+    if (propertyGroup && propertyGroup[value]) {
         return propertyGroup[value];
     }
 
