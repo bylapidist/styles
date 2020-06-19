@@ -25,7 +25,7 @@ test('it renders the correct value', () => {
 
     const values = withColors(theme, styles);
     const expected =
-        'background-color: white;text-color: white;border-color: white;border-top-color: white;border-right-color: white;border-bottom-color: white;border-left-color: white;';
+        'background-color: white;color: white;border-color: white;border-top-color: white;border-right-color: white;border-bottom-color: white;border-left-color: white;';
 
     expect(values).toEqual(expected);
 });
@@ -36,7 +36,7 @@ test('it passes through unknown props', () => {
     };
 
     const values = withColors(theme, styles);
-    const expected = 'text-color: invalid;';
+    const expected = 'color: invalid;';
 
     expect(values).toEqual(expected);
 });

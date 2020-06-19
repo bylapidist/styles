@@ -10,7 +10,7 @@ export const withColors = (theme: Theme, styles: Styles): string =>
         },
         {
             styleName: 'textColor',
-            propertyName: 'text-color',
+            propertyName: 'color',
             value: color(theme, styles.textColor)
         },
         {
