@@ -15,13 +15,3 @@ test('it retrieves the correct value', () => {
 
     expect(values).toEqual('2px');
 });
-
-test('it throws on invalid value', () => {
-    const theme: Theme = {};
-
-    const values = (): void => {
-        borderWidth(theme, 'invalid');
-    };
-
-    expect(values).toThrow('invalid does not exist on theme.borderWidths');
-});

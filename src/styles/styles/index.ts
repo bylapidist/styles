@@ -1,8 +1,8 @@
-import { Styles } from './index';
-import { Theme } from '../theme';
-import { withNesting } from './with-nesting';
-import { withBase } from './with-base';
-import { withBreakpoints } from './with-breakpoints';
+import { Styles } from '../index';
+import { Theme } from '../../theme';
+import { withNesting } from '../nesting';
+import { withBase } from '../base';
+import { withBreakpoints } from '../breakpoints';
 
 export const withStyles = (theme: Theme, styles?: Styles): string =>
     styles

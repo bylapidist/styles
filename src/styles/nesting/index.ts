@@ -1,6 +1,6 @@
-import { Styles } from './index';
-import { Theme, ThemeObject } from '../theme';
-import { withBase } from './with-base';
+import { Styles } from '../index';
+import { Theme, ThemeObject } from '../../theme';
+import { withBase } from '../base';
 
 const withNestingSelectors = (
     pseudoSelectors: ThemeObject<Styles>,

@@ -1,6 +1,6 @@
-import { Styles } from './index';
-import { breakpoint, Theme, ThemeObject } from '../theme';
-import { withBase } from './with-base';
+import { Styles } from '../index';
+import { breakpoint, Theme, ThemeObject } from '../../theme';
+import { withBase } from '../base';
 
 export const withMediaQueries = (
     breakpoints: ThemeObject<Styles>,

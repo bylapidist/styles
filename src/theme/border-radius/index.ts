@@ -3,6 +3,6 @@ import { getProperty } from '../get-property';
 
 export const borderRadius = (
     theme: Theme,
-    borderRadius: NumberOrString
+    borderRadius?: NumberOrString
 ): BorderRadius =>
     getProperty<BorderRadius>(theme, 'borderRadii', borderRadius);

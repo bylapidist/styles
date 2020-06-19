@@ -23,13 +23,3 @@ test('it retrieves the correct value', () => {
         xxl: '(min-width: 1440px)'
     });
 });
-
-test('it throws on invalid value', () => {
-    const theme: Theme = {};
-
-    const values = (): void => {
-        allMediaQueries(theme);
-    };
-
-    expect(values).toThrow('theme.breakpoints does not exist');
-});

@@ -3,5 +3,5 @@ import { getProperty } from '../get-property';
 
 export const borderWidth = (
     theme: Theme,
-    borderWidth: NumberOrString
+    borderWidth?: NumberOrString
 ): BorderWidth => getProperty<BorderWidth>(theme, 'borderWidths', borderWidth);

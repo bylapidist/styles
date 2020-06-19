@@ -3,5 +3,5 @@ import { getProperty } from '../get-property';
 
 export const lineHeight = (
     theme: Theme,
-    lineHeight: NumberOrString
+    lineHeight?: NumberOrString
 ): LineHeight => getProperty<LineHeight>(theme, 'lineHeights', lineHeight);

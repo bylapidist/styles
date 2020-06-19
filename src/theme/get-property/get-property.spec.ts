@@ -18,12 +18,10 @@ test('it retrieves the correct value', () => {
     expect(values).toEqual('0.125rem');
 });
 
-test('it throws on invalid value', () => {
+test('it passes through unknown values', () => {
     const theme: Theme = {};
 
-    const values = (): void => {
-        getProperty(theme, 'borderRadii', 'invalid');
-    };
+    const values = getProperty(theme, 'borderRadii', '-1');
 
-    expect(values).toThrow('invalid does not exist on theme.borderRadii');
+    expect(values).toEqual('-1');
 });

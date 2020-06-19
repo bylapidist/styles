@@ -3,5 +3,5 @@ import { getProperty } from '../get-property';
 
 export const fontWeight = (
     theme: Theme,
-    fontWeight: NumberOrString
+    fontWeight?: NumberOrString
 ): FontWeight => getProperty<FontWeight>(theme, 'fontWeights', fontWeight);

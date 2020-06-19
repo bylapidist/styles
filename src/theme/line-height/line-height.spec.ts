@@ -16,13 +16,3 @@ test('it retrieves the correct value', () => {
 
     expect(values).toEqual('1.25');
 });
-
-test('it throws on invalid value', () => {
-    const theme: Theme = {};
-
-    const values = (): void => {
-        lineHeight(theme, 'invalid');
-    };
-
-    expect(values).toThrow('invalid does not exist on theme.lineHeights');
-});

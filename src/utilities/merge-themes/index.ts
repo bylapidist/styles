@@ -1,5 +1,5 @@
 import deepMerge from 'lodash.merge';
-import { Theme } from '../index';
+import { Theme } from '../../theme';
 
 export const mergeThemes = (
     theme1?: Theme,
