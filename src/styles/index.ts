@@ -11,7 +11,7 @@ export interface StyleMap {
 export interface Styles {
     readonly fontSize?: CSS.FontSizeProperty<NumberOrString>;
     readonly fontFamily?: CSS.FontFamilyProperty;
-    readonly fontWeight?: CSS.FontWeightProperty;
+    readonly fontWeight?: CSS.FontWeightProperty | NumberOrString;
     readonly lineHeight?: CSS.LineHeightProperty<NumberOrString>;
     readonly letterSpacing?: CSS.LetterSpacingProperty<NumberOrString>;
     readonly borderRadius?: CSS.BorderRadiusProperty<NumberOrString>;
