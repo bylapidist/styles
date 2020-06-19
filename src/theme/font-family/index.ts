@@ -11,7 +11,7 @@ export const fontFamily = (
         fontFamily
     );
 
-    if (value.join) {
+    if (value && value.join) {
         return value.join(', ');
     }
 
