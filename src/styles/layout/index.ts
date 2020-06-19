@@ -1,5 +1,5 @@
-import { Styles } from './index';
-import { breakpoint, size, width, Theme } from '../theme';
+import { Styles } from '../index';
+import { breakpoint, size, width, Theme } from '../../theme';
 
 export const withLayout = (theme: Theme, styles?: Styles): string =>
     styles

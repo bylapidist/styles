@@ -2,7 +2,7 @@ import * as CSS from 'csstype';
 
 export type ThemeObject<T> = { [K: string]: T };
 export type ThemeArray<T> = { [K: string]: T[] };
-export type NumberOrString = string | number | 0;
+export type NumberOrString = string | number | 0 | undefined;
 export type AllBreakpoints = string[];
 export type AllMediaQueries = ThemeObject<string>;
 export type BorderRadius = CSS.BorderRadiusProperty<NumberOrString>;
@@ -70,4 +70,3 @@ export * from './letter-spacing';
 export * from './line-height';
 export * from './size';
 export * from './width';
-export * from './merge-themes';

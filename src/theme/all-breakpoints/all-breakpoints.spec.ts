@@ -16,13 +16,3 @@ test('it retrieves the correct value', () => {
 
     expect(values).toEqual(['all', 'sm', 'md', 'lg', 'xl', 'xxl']);
 });
-
-test('it throws on invalid value', () => {
-    const theme: Theme = {};
-
-    const values = (): void => {
-        allBreakpoints(theme);
-    };
-
-    expect(values).toThrow('theme.breakpoints does not exist');
-});

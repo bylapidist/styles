@@ -1,5 +1,12 @@
 import * as CSS from 'csstype';
-import { ColorGroup, NumberOrString, ThemeObject } from '../theme';
+import { Color, ColorGroup, NumberOrString, ThemeObject } from '../theme';
+
+export interface StyleMap {
+    readonly styleName: string;
+    readonly propertyName: string;
+    readonly value?: NumberOrString;
+    [K: string]: NumberOrString | undefined;
+}
 
 export interface Styles {
     readonly fontSize?: CSS.FontSizeProperty<NumberOrString>;
@@ -13,13 +20,18 @@ export interface Styles {
     readonly borderRightWidth?: CSS.BorderRightWidthProperty<NumberOrString>;
     readonly borderBottomWidth?: CSS.BorderBottomWidthProperty<NumberOrString>;
     readonly borderLeftWidth?: CSS.BorderLeftWidthProperty<NumberOrString>;
-    readonly borderColor?: ColorGroup;
-    readonly borderTopColor?: ColorGroup;
-    readonly borderRightColor?: ColorGroup;
-    readonly borderBottomColor?: ColorGroup;
-    readonly borderLeftColor?: ColorGroup;
-    readonly backgroundColor?: ColorGroup;
-    readonly textColor?: ColorGroup;
+    readonly borderStyle?: CSS.BorderBlockStyleProperty;
+    readonly borderTopStyle?: CSS.BorderTopStyleProperty;
+    readonly borderRightStyle?: CSS.BorderRightStyleProperty;
+    readonly borderBottomStyle?: CSS.BorderBottomStyleProperty;
+    readonly borderLeftStyle?: CSS.BorderLeftStyleProperty;
+    readonly borderColor?: ColorGroup | Color;
+    readonly borderTopColor?: ColorGroup | Color;
+    readonly borderRightColor?: ColorGroup | Color;
+    readonly borderBottomColor?: ColorGroup | Color;
+    readonly borderLeftColor?: ColorGroup | Color;
+    readonly backgroundColor?: ColorGroup | Color;
+    readonly textColor?: ColorGroup | Color;
     readonly boxShadow?: CSS.BoxShadowProperty;
     readonly width?: CSS.WidthProperty<NumberOrString>;
     readonly minWidth?: CSS.WidthProperty<NumberOrString>;
@@ -52,4 +64,18 @@ export interface Styles {
     readonly overflowY?: CSS.OverflowYProperty;
     readonly breakpoints?: ThemeObject<Styles>;
     readonly pseudo?: ThemeObject<Styles>;
+    // TODO: better type integration with Theme
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [K: string]: any;
 }
+
+export * from './base';
+export * from './borders';
+export * from './breakpoints';
+export * from './colors';
+export * from './layout';
+export * from './media-queries';
+export * from './nesting';
+export * from './styles';
+export * from './typography';
+export * from './utilities';

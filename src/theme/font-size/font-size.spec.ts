@@ -20,13 +20,3 @@ test('it retrieves the correct value', () => {
 
     expect(values).toEqual('0.75rem');
 });
-
-test('it throws on invalid value', () => {
-    const theme: Theme = {};
-
-    const values = (): void => {
-        fontSize(theme, 'invalid');
-    };
-
-    expect(values).toThrow('invalid does not exist on theme.fontSizes');
-});

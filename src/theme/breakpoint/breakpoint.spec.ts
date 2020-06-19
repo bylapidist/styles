@@ -16,13 +16,3 @@ test('it retrieves the correct value', () => {
 
     expect(values).toEqual('640px');
 });
-
-test('it throws on invalid value', () => {
-    const theme: Theme = {};
-
-    const values = (): void => {
-        breakpoint(theme, 'invalid');
-    };
-
-    expect(values).toThrow('invalid does not exist on theme.breakpoints');
-});

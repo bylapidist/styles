@@ -3,8 +3,17 @@ import { getProperty } from '../get-property';
 
 export const fontFamily = (
     theme: Theme,
-    fontFamily: NumberOrString
-): FontFamily =>
-    getProperty<Array<FontFamily>>(theme, 'fontFamilies', fontFamily).join(
-        ', '
+    fontFamily?: NumberOrString
+): FontFamily => {
+    const value: string[] = getProperty<Array<FontFamily>>(
+        theme,
+        'fontFamilies',
+        fontFamily
     );
+
+    if (value.join) {
+        return value.join(', ');
+    }
+
+    return (value as unknown) as string;
+};
