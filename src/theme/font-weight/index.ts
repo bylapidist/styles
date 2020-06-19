@@ -1,4 +1,5 @@
-import { FontWeight, getProperty, NumberOrString, Theme } from '../index';
+import { FontWeight, NumberOrString, Theme } from '../index';
+import { getProperty } from '../get-property';
 
 export const fontWeight = (
     theme: Theme,

@@ -1,4 +1,5 @@
-import { BorderRadius, getProperty, NumberOrString, Theme } from '../index';
+import { BorderRadius, NumberOrString, Theme } from '../index';
+import { getProperty } from '../get-property';
 
 export const borderRadius = (
     theme: Theme,

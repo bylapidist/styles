@@ -1,4 +1,5 @@
-import { FontFamily, getProperty, NumberOrString, Theme } from '../index';
+import { FontFamily, NumberOrString, Theme } from '../index';
+import { getProperty } from '../get-property';
 
 export const fontFamily = (
     theme: Theme,

@@ -1,4 +1,5 @@
-import { getProperty, LineHeight, NumberOrString, Theme } from '../index';
+import { LineHeight, NumberOrString, Theme } from '../index';
+import { getProperty } from '../get-property';
 
 export const lineHeight = (
     theme: Theme,

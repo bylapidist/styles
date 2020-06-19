@@ -1,4 +1,5 @@
-import { Breakpoint, getProperty, NumberOrString, Theme } from '../index';
+import { Breakpoint, NumberOrString, Theme } from '../index';
+import { getProperty } from '../get-property';
 
 export const breakpoint = (
     theme: Theme,

@@ -1,4 +1,5 @@
-import { getProperty, LetterSpacing, NumberOrString, Theme } from '../index';
+import { LetterSpacing, NumberOrString, Theme } from '../index';
+import { getProperty } from '../get-property';
 
 export const letterSpacing = (
     theme: Theme,
