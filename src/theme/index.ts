@@ -2,8 +2,6 @@ import * as CSS from 'csstype';
 
 export type ThemeObject<T> = { [K: string]: T };
 export type ThemeArray<T> = { [K: string]: T[] };
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type AnyThemeObject = ThemeObject<any> | undefined;
 export type NumberOrString = string | number | 0;
 export type AllBreakpoints = string[];
 export type AllMediaQueries = ThemeObject<string>;
@@ -22,6 +20,24 @@ export type Size = string;
 export type Width =
     | CSS.WidthProperty<NumberOrString>
     | CSS.HeightProperty<NumberOrString>;
+export type ThemeObjects =
+    | NumberOrString
+    | Breakpoint
+    | FontSize
+    | FontFamily
+    | FontWeight
+    | LineHeight
+    | LetterSpacing
+    | Size
+    | BorderRadius
+    | BorderWidth
+    | BoxShadow
+    | Width
+    | ThemeObject<Color>;
+export type AnyThemeObject =
+    | ThemeObject<ThemeObjects>
+    | ThemeArray<ThemeObjects>
+    | undefined;
 
 export interface Theme {
     readonly breakpoints?: ThemeObject<Breakpoint>;
@@ -36,7 +52,7 @@ export interface Theme {
     readonly boxShadows?: ThemeObject<BoxShadow>;
     readonly widths?: ThemeObject<Width>;
     readonly colors?: ThemeObject<ThemeObject<Color>>;
-    [k: string]: AnyThemeObject;
+    [K: string]: AnyThemeObject;
 }
 
 export * from './all-breakpoints';

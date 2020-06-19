@@ -8,7 +8,7 @@ export const getProperty = <T>(
     const propertyGroup: AnyThemeObject = theme[property];
 
     if (propertyGroup && propertyGroup[value]) {
-        return propertyGroup[value];
+        return (propertyGroup[value] as unknown) as T;
     }
 
     throw new Error(`${value} does not exist on theme.${property}`);
