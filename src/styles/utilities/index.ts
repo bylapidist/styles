@@ -1,7 +1,8 @@
 import { Styles } from '../index';
+import { filterToProperties } from '../../utilities/filter-to-properties';
 
-export const withUtilities = (styles: Styles): string => {
-    return [
+export const withUtilities = (styles: Styles): string =>
+    filterToProperties([
         {
             styleName: 'cursor',
             propertyName: 'cursor',
@@ -22,8 +23,4 @@ export const withUtilities = (styles: Styles): string => {
             propertyName: 'overflow-y',
             value: styles.overflowY
         }
-    ]
-        .filter((styleMaps) => styleMaps.value)
-        .map((styleMap) => `${styleMap.propertyName}: ${styleMap.value};`)
-        .join('');
-};
+    ]);

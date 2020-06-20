@@ -7,9 +7,10 @@ import {
     lineHeight,
     Theme
 } from '../../theme';
+import { filterToProperties } from '../../utilities/filter-to-properties';
 
 export const withTypography = (theme: Theme, styles: Styles): string =>
-    [
+    filterToProperties([
         {
             styleName: 'textAlign',
             propertyName: 'text-align',
@@ -40,7 +41,4 @@ export const withTypography = (theme: Theme, styles: Styles): string =>
             propertyName: 'letter-spacing',
             value: letterSpacing(theme, styles.letterSpacing)
         }
-    ]
-        .filter((styleMaps) => styleMaps.value)
-        .map((styleMap) => `${styleMap.propertyName}: ${styleMap.value};`)
-        .join('');
+    ]);

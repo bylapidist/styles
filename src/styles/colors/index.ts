@@ -1,8 +1,9 @@
 import { Styles } from '../index';
 import { color, Theme } from '../../theme';
+import { filterToProperties } from '../../utilities/filter-to-properties';
 
 export const withColors = (theme: Theme, styles: Styles): string =>
-    [
+    filterToProperties([
         {
             styleName: 'backgroundColor',
             propertyName: 'background-color',
@@ -38,7 +39,4 @@ export const withColors = (theme: Theme, styles: Styles): string =>
             propertyName: 'border-left-color',
             value: color(theme, styles.borderLeftColor)
         }
-    ]
-        .filter((styleMaps) => styleMaps.value)
-        .map((styleMap) => `${styleMap.propertyName}: ${styleMap.value};`)
-        .join('');
+    ]);

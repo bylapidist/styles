@@ -1,8 +1,9 @@
 import { Styles } from '../index';
 import { borderRadius, borderWidth, boxShadow, Theme } from '../../theme';
+import { filterToProperties } from '../../utilities/filter-to-properties';
 
 export const withBorders = (theme: Theme, styles: Styles): string =>
-    [
+    filterToProperties([
         {
             styleName: 'borderStyle',
             propertyName: 'border-style',
@@ -63,7 +64,4 @@ export const withBorders = (theme: Theme, styles: Styles): string =>
             propertyName: 'box-shadow',
             value: boxShadow(theme, styles.boxShadow)
         }
-    ]
-        .filter((styleMaps) => styleMaps.value)
-        .map((styleMap) => `${styleMap.propertyName}: ${styleMap.value};`)
-        .join('');
+    ]);
