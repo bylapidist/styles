@@ -1,6 +1,6 @@
 import { Styles } from '../index';
-import { withColors } from './index';
 import { Theme } from '../../theme';
+import { withColors } from './index';
 
 const theme: Theme = {
     colors: {

@@ -10,7 +10,7 @@ export const withBase = (theme: Theme, styles?: Styles): string => {
     if (!styles) return '';
 
     return `
-        ${withUtilities(styles)};
+        ${withUtilities(styles)}
         ${withTypography(theme, styles)}
         ${withBorders(theme, styles)}
         ${withLayout(theme, styles)}
