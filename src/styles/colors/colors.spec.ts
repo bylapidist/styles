@@ -40,17 +40,3 @@ test('it passes through unknown props', () => {
 
     expect(values).toEqual(expected);
 });
-
-test('it throws on invalid value', () => {
-    const styles: Styles = {
-        backgroundColor: { group: 'invalid1', shade: 'invalid2' }
-    };
-
-    const values = (): void => {
-        withColors(theme, styles);
-    };
-
-    expect(values).toThrow(
-        'invalid1 or invalid2 does not exist on theme.colors'
-    );
-});

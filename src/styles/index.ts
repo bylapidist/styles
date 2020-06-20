@@ -1,6 +1,8 @@
 import * as CSS from 'csstype';
 import { Color, ColorGroup, NumberOrString, ThemeObject } from '../theme';
 
+export * from './styles';
+
 export interface StyleMap {
     readonly styleName: string;
     readonly propertyName: string;
@@ -36,11 +38,19 @@ export interface Styles {
     readonly width?: CSS.WidthProperty<NumberOrString>;
     readonly minWidth?: CSS.WidthProperty<NumberOrString>;
     readonly maxWidth?: CSS.WidthProperty<NumberOrString>;
+    readonly containerMinWidth?: CSS.WidthProperty<NumberOrString>;
+    readonly sizeMinWidth?: CSS.WidthProperty<NumberOrString>;
+    readonly containerMaxWidth?: CSS.WidthProperty<NumberOrString>;
+    readonly sizeMaxWidth?: CSS.WidthProperty<NumberOrString>;
     readonly containerWidth?: CSS.WidthProperty<NumberOrString>;
     readonly sizeWidth?: CSS.WidthProperty<NumberOrString>;
     readonly height?: CSS.HeightProperty<NumberOrString>;
     readonly minHeight?: CSS.HeightProperty<NumberOrString>;
     readonly maxHeight?: CSS.HeightProperty<NumberOrString>;
+    readonly containerMinHeight?: CSS.HeightProperty<NumberOrString>;
+    readonly sizeMinHeight?: CSS.HeightProperty<NumberOrString>;
+    readonly containerMaxHeight?: CSS.HeightProperty<NumberOrString>;
+    readonly sizeMaxHeight?: CSS.HeightProperty<NumberOrString>;
     readonly containerHeight?: CSS.HeightProperty<NumberOrString>;
     readonly sizeHeight?: CSS.HeightProperty<NumberOrString>;
     readonly textAlign?: CSS.TextAlignProperty;
@@ -68,14 +78,3 @@ export interface Styles {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [K: string]: any;
 }
-
-export * from './base';
-export * from './borders';
-export * from './breakpoints';
-export * from './colors';
-export * from './layout';
-export * from './media-queries';
-export * from './nesting';
-export * from './styles';
-export * from './typography';
-export * from './utilities';

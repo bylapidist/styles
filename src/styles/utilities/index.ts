@@ -1,8 +1,38 @@
 import { Styles } from '../index';
-import { filterToProperties } from '../../utilities/filter-to-properties';
+import { filterToProperties } from '../../theme/filter-to-properties';
 
 export const withUtilities = (styles: Styles): string =>
     filterToProperties([
+        {
+            styleName: 'borderStyle',
+            propertyName: 'border-style',
+            value: styles.borderStyle
+        },
+        {
+            styleName: 'borderTopStyle',
+            propertyName: 'border-top-style',
+            value: styles.borderTopStyle
+        },
+        {
+            styleName: 'borderRightStyle',
+            propertyName: 'border-right-style',
+            value: styles.borderRightStyle
+        },
+        {
+            styleName: 'borderBottomStyle',
+            propertyName: 'border-bottom-style',
+            value: styles.borderBottomStyle
+        },
+        {
+            styleName: 'borderLeftStyle',
+            propertyName: 'border-left-style',
+            value: styles.borderLeftStyle
+        },
+        {
+            styleName: 'textAlign',
+            propertyName: 'text-align',
+            value: styles.textAlign
+        },
         {
             styleName: 'cursor',
             propertyName: 'cursor',

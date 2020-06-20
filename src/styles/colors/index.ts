@@ -1,42 +1,63 @@
 import { Styles } from '../index';
-import { color, Theme } from '../../theme';
-import { filterToProperties } from '../../utilities/filter-to-properties';
+import { Color, Theme } from '../../theme';
+import { filterToProperties } from '../../theme/filter-to-properties';
+import { getProperty } from '../../theme/get-property';
 
 export const withColors = (theme: Theme, styles: Styles): string =>
     filterToProperties([
         {
             styleName: 'backgroundColor',
             propertyName: 'background-color',
-            value: color(theme, styles.backgroundColor)
+            value: getProperty<Color>(
+                theme,
+                'backgroundColor',
+                styles.backgroundColor
+            )
         },
         {
             styleName: 'textColor',
             propertyName: 'color',
-            value: color(theme, styles.textColor)
+            value: getProperty<Color>(theme, 'textColor', styles.textColor)
         },
         {
             styleName: 'borderColor',
             propertyName: 'border-color',
-            value: color(theme, styles.borderColor)
+            value: getProperty<Color>(theme, 'borderColor', styles.borderColor)
         },
         {
             styleName: 'borderTopColor',
             propertyName: 'border-top-color',
-            value: color(theme, styles.borderTopColor)
+            value: getProperty<Color>(
+                theme,
+                'borderTopColor',
+                styles.borderTopColor
+            )
         },
         {
             styleName: 'borderRightColor',
             propertyName: 'border-right-color',
-            value: color(theme, styles.borderRightColor)
+            value: getProperty<Color>(
+                theme,
+                'borderRightColor',
+                styles.borderRightColor
+            )
         },
         {
             styleName: 'borderBottomColor',
             propertyName: 'border-bottom-color',
-            value: color(theme, styles.borderBottomColor)
+            value: getProperty<Color>(
+                theme,
+                'borderBottomColor',
+                styles.borderBottomColor
+            )
         },
         {
             styleName: 'borderLeftColor',
             propertyName: 'border-left-color',
-            value: color(theme, styles.borderLeftColor)
+            value: getProperty<Color>(
+                theme,
+                'borderLeftColor',
+                styles.borderLeftColor
+            )
         }
     ]);

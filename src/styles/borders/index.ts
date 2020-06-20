@@ -1,67 +1,71 @@
 import { Styles } from '../index';
-import { borderRadius, borderWidth, boxShadow, Theme } from '../../theme';
-import { filterToProperties } from '../../utilities/filter-to-properties';
+import { BorderRadius, BorderWidth, Theme } from '../../theme';
+import { filterToProperties } from '../../theme/filter-to-properties';
+import { getProperty } from '../../theme/get-property';
 
 export const withBorders = (theme: Theme, styles: Styles): string =>
     filterToProperties([
         {
-            styleName: 'borderStyle',
-            propertyName: 'border-style',
-            value: styles.borderStyle
-        },
-        {
-            styleName: 'borderTopStyle',
-            propertyName: 'border-top-style',
-            value: styles.borderTopStyle
-        },
-        {
-            styleName: 'borderRightStyle',
-            propertyName: 'border-right-style',
-            value: styles.borderRightStyle
-        },
-        {
-            styleName: 'borderBottomStyle',
-            propertyName: 'border-bottom-style',
-            value: styles.borderBottomStyle
-        },
-        {
-            styleName: 'borderLeftStyle',
-            propertyName: 'border-left-style',
-            value: styles.borderLeftStyle
-        },
-        {
             styleName: 'borderRadius',
             propertyName: 'border-radius',
-            value: borderRadius(theme, styles.borderRadius)
+            value: getProperty<BorderRadius>(
+                theme,
+                'borderRadii',
+                styles.borderRadius
+            )
         },
         {
             styleName: 'borderWidth',
             propertyName: 'border-width',
-            value: borderWidth(theme, styles.borderWidth)
+            value: getProperty<BorderWidth>(
+                theme,
+                'borderWidths',
+                styles.borderWidth
+            )
         },
         {
             styleName: 'borderTopWidth',
             propertyName: 'border-top-width',
-            value: borderWidth(theme, styles.borderTopWidth)
+            value: getProperty<BorderWidth>(
+                theme,
+                'borderWidths',
+                styles.borderTopWidth
+            )
         },
         {
             styleName: 'borderRightWidth',
             propertyName: 'border-right-width',
-            value: borderWidth(theme, styles.borderRightWidth)
+            value: getProperty<BorderWidth>(
+                theme,
+                'borderWidths',
+                styles.borderRightWidth
+            )
         },
         {
             styleName: 'borderBottomWidth',
             propertyName: 'border-bottom-width',
-            value: borderWidth(theme, styles.borderBottomWidth)
+            value: getProperty<BorderWidth>(
+                theme,
+                'borderWidths',
+                styles.borderBottomWidth
+            )
         },
         {
             styleName: 'borderLeftWidth',
             propertyName: 'border-left-width',
-            value: borderWidth(theme, styles.borderLeftWidth)
+            value: getProperty<BorderWidth>(
+                theme,
+                'borderWidths',
+                styles.borderLeftWidth
+            )
         },
         {
             styleName: 'boxShadow',
             propertyName: 'box-shadow',
-            value: boxShadow(theme, styles.boxShadow)
+            value: getProperty<BorderWidth>(
+                theme,
+                'boxShadows',
+                styles.boxShadow
+            )
         }
     ]);

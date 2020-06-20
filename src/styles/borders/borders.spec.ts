@@ -29,17 +29,12 @@ test('it renders the correct value', () => {
     const styles: Styles = {
         boxShadow: '1',
         borderRadius: '2',
-        borderWidth: 'px',
-        borderStyle: 'solid',
-        borderTopStyle: 'dashed',
-        borderRightStyle: 'solid',
-        borderBottomStyle: 'solid',
-        borderLeftStyle: 'solid'
+        borderWidth: 'px'
     };
 
     const values = withBorders(theme, styles);
     const expected =
-        'border-style: solid;border-top-style: dashed;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;border-radius: 0.25rem;border-width: 1px;box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);';
+        'border-radius: 0.25rem;border-width: 1px;box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);';
 
     expect(values).toEqual(expected);
 });
