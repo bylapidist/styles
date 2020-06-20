@@ -46,9 +46,9 @@ export const withLayout = (theme: Theme, styles: Styles): string =>
             value: getProperty<Margin>(theme, 'sizes', styles.marginBottom)
         },
         {
-            styleName: 'marginLeft',
-            propertyName: 'margin-left',
-            value: getProperty<Margin>(theme, 'sizes', styles.marginLeft)
+            styleName: 'marginRight',
+            propertyName: 'margin-right',
+            value: getProperty<Margin>(theme, 'sizes', styles.marginRight)
         },
         {
             styleName: 'padding',
@@ -81,9 +81,9 @@ export const withLayout = (theme: Theme, styles: Styles): string =>
             value: getProperty<Padding>(theme, 'sizes', styles.paddingTop)
         },
         {
-            styleName: 'paddingLeft',
-            propertyName: 'padding-left',
-            value: getProperty<Padding>(theme, 'sizes', styles.paddingLeft)
+            styleName: 'paddingRight',
+            propertyName: 'padding-right',
+            value: getProperty<Padding>(theme, 'sizes', styles.paddingRight)
         },
         {
             styleName: 'paddingBottom',
