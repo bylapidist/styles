@@ -1,24 +1,17 @@
 import { Styles } from '../index';
 import { Theme, ThemeObject } from '../../theme';
 import { withBase } from '../base';
+import { nestSelector } from '../../utilities/nest-selector';
 
 const withNestingSelectors = (
     pseudoSelectors: ThemeObject<Styles>,
     theme: Theme
 ): string =>
-    Object.entries(pseudoSelectors)
-        .map(
-            ([selector, styles]) => `
-            ${selector} {
-                ${withBase(theme, styles)}
-            }
-        `
-        )
-        .join('');
+    nestSelector(
+        pseudoSelectors,
+        ([selector, styles]) =>
+            `${selector} { ${withBase(theme, styles).trim()} }`
+    );
 
-export const withNesting = (theme: Theme, styles?: Styles): string =>
-    styles && styles.pseudo
-        ? `
-        ${withNestingSelectors(styles.pseudo, theme)}
-    `
-        : '';
+export const withNesting = (theme: Theme, styles: Styles): string =>
+    styles.pseudo ? withNestingSelectors(styles.pseudo, theme) : '';

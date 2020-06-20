@@ -1,17 +1,17 @@
 import { Styles } from '../index';
 import { breakpoint, Theme, ThemeObject } from '../../theme';
 import { withBase } from '../base';
+import { nestSelector } from '../../utilities/nest-selector';
 
 export const withMediaQueries = (
     breakpoints: ThemeObject<Styles>,
     theme: Theme
 ): string =>
-    Object.entries(breakpoints)
-        .map(
-            ([bp, styles]) => `
-            @media only screen and (min-width: ${breakpoint(theme, bp)}) {
-                ${withBase(theme, styles)}
-            }
-        `
-        )
-        .join('');
+    nestSelector(
+        breakpoints,
+        ([bp, styles]) =>
+            `@media only screen and (min-width: ${breakpoint(
+                theme,
+                bp
+            )}) { ${withBase(theme, styles).trim()} }`
+    );
