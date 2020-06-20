@@ -1,5 +1,5 @@
 import { Styles } from '../../styles';
-import { ThemeObject } from '../../theme';
+import { ThemeObject } from '../index';
 
 export const nestSelector = (
     object: ThemeObject<Styles>,

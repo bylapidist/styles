@@ -1,5 +1,5 @@
 import { Styles } from '../index';
-import { Theme, ThemeObject } from '../../theme';
+import { Theme } from '../../theme';
 import { withMediaQueries } from './index';
 
 const theme: Theme = {
@@ -13,17 +13,19 @@ const theme: Theme = {
     }
 };
 
-const themeObject: ThemeObject<Styles> = {
-    md: {
-        fontSize: '1px'
-    },
-    lg: {
-        fontSize: '2px'
+const styles: Styles = {
+    breakpoints: {
+        md: {
+            fontSize: '1px'
+        },
+        lg: {
+            fontSize: '2px'
+        }
     }
 };
 
 test('it renders the correct value', () => {
-    const values = withMediaQueries(themeObject, theme);
+    const values = withMediaQueries(theme, styles);
     const expected =
         '@media only screen and (min-width: 768px) { font-size: 1px; } @media only screen and (min-width: 1024px) { font-size: 2px; }';
 

@@ -1,4 +1,5 @@
-import { getProperty, Theme } from '../index';
+import { Theme } from '../index';
+import { getProperty } from './index';
 
 test('it retrieves the correct value', () => {
     const theme: Theme = {
@@ -24,4 +25,35 @@ test('it passes through unknown values', () => {
     const values = getProperty(theme, 'borderRadii', '-1');
 
     expect(values).toEqual('-1');
+});
+
+test('it works with array properties', () => {
+    const theme: Theme = {
+        fontFamilies: {
+            sans: ['hello', 'world']
+        }
+    };
+
+    const values = getProperty(theme, 'fontFamilies', 'sans');
+
+    expect(values).toEqual('hello, world');
+});
+
+test('it works with color groups', () => {
+    const theme: Theme = {
+        colors: {
+            base: {
+                white: 'white',
+                black: 'black',
+                transparent: 'transparent'
+            }
+        }
+    };
+
+    const values = getProperty(theme, 'colors', {
+        group: 'base',
+        shade: 'white'
+    });
+
+    expect(values).toEqual('white');
 });

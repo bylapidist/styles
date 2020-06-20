@@ -1,10 +1,11 @@
 import * as CSS from 'csstype';
 
+export * from './get-property';
+export * from './merge-themes';
+
 export type ThemeObject<T> = { [K: string]: T };
 export type ThemeArray<T> = { [K: string]: T[] };
 export type NumberOrString = string | number | 0 | undefined;
-export type AllBreakpoints = string[];
-export type AllMediaQueries = ThemeObject<string>;
 export type BorderRadius = CSS.BorderRadiusProperty<NumberOrString>;
 export type BorderWidth = CSS.BorderWidthProperty<NumberOrString>;
 export type BoxShadow = CSS.BoxShadowProperty;
@@ -17,7 +18,19 @@ export type FontWeight = CSS.FontWeightProperty;
 export type LetterSpacing = CSS.LetterSpacingProperty<NumberOrString>;
 export type LineHeight = CSS.LineHeightProperty<NumberOrString>;
 export type Size = string;
-export type Width =
+export type Margin =
+    | CSS.MarginProperty<NumberOrString>
+    | CSS.MarginTopProperty<NumberOrString>
+    | CSS.MarginRightProperty<NumberOrString>
+    | CSS.MarginBottomProperty<NumberOrString>
+    | CSS.MarginLeftProperty<NumberOrString>;
+export type Padding =
+    | CSS.PaddingProperty<NumberOrString>
+    | CSS.PaddingTopProperty<NumberOrString>
+    | CSS.PaddingRightProperty<NumberOrString>
+    | CSS.PaddingBottomProperty<NumberOrString>
+    | CSS.PaddingLeftProperty<NumberOrString>;
+export type WidthOrHeight =
     | CSS.WidthProperty<NumberOrString>
     | CSS.HeightProperty<NumberOrString>;
 export type ThemeObjects =
@@ -29,10 +42,12 @@ export type ThemeObjects =
     | LineHeight
     | LetterSpacing
     | Size
+    | Margin
+    | Padding
     | BorderRadius
     | BorderWidth
     | BoxShadow
-    | Width
+    | WidthOrHeight
     | ThemeObject<Color>;
 export type AnyThemeObject =
     | ThemeObject<ThemeObjects>
@@ -50,23 +65,7 @@ export interface Theme {
     readonly borderRadii?: ThemeObject<BorderRadius>;
     readonly borderWidths?: ThemeObject<BorderWidth>;
     readonly boxShadows?: ThemeObject<BoxShadow>;
-    readonly widths?: ThemeObject<Width>;
+    readonly widths?: ThemeObject<WidthOrHeight>;
     readonly colors?: ThemeObject<ThemeObject<Color>>;
     [K: string]: AnyThemeObject;
 }
-
-export * from './all-breakpoints';
-export * from './all-media-queries';
-export * from './border-radius';
-export * from './border-width';
-export * from './box-shadow';
-export * from './breakpoint';
-export * from './color';
-export * from './font-family';
-export * from './font-size';
-export * from './font-weight';
-export * from './get-property';
-export * from './letter-spacing';
-export * from './line-height';
-export * from './size';
-export * from './width';

@@ -51,7 +51,6 @@ const theme: Theme = {
 
 test('it renders the correct value', () => {
     const styles: Styles = {
-        textAlign: 'center',
         fontSize: '1',
         fontWeight: 400,
         fontFamily: 'sans',
@@ -61,7 +60,7 @@ test('it renders the correct value', () => {
 
     const values = withTypography(theme, styles);
     const expected =
-        'text-align: center;font-size: 0.75rem;font-weight: 400;font-family: Montserrat, sans-serif;line-height: 2;letter-spacing: narrow;';
+        'font-size: 0.75rem;font-weight: 400;font-family: Montserrat, sans-serif;line-height: 2;letter-spacing: narrow;';
 
     expect(values).toEqual(expected);
 });

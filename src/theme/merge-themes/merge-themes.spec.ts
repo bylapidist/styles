@@ -1,5 +1,5 @@
 import { mergeThemes } from './index';
-import { Theme } from '../../theme';
+import { Theme } from '../index';
 
 test('it merges themes', () => {
     const theme1: Theme = {
