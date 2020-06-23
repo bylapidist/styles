@@ -1,7 +1,28 @@
-import * as CSS from 'csstype';
-import { Color, ColorGroup, NumberOrString, ThemeObject } from '../theme';
+import {
+    BorderRadius,
+    BorderStyle,
+    BorderWidth,
+    BoxShadow,
+    ColorOrColorGroup,
+    Cursor,
+    FontFamily,
+    FontSize,
+    FontWeight,
+    LetterSpacing,
+    LineHeight,
+    Margin,
+    NumberOrString,
+    Overflow,
+    Padding,
+    TextAlign,
+    ThemeObject,
+    ThemeObjects,
+    WidthOrHeight
+} from '../theme';
 
 export * from './styles';
+
+export type AnyStyleObject = ThemeObjects | ThemeObject<Styles> | undefined;
 
 export interface StyleMap {
     readonly styleName: string;
@@ -11,70 +32,68 @@ export interface StyleMap {
 }
 
 export interface Styles {
-    readonly fontSize?: CSS.FontSizeProperty<NumberOrString>;
-    readonly fontFamily?: CSS.FontFamilyProperty;
-    readonly fontWeight?: CSS.FontWeightProperty | NumberOrString;
-    readonly lineHeight?: CSS.LineHeightProperty<NumberOrString>;
-    readonly letterSpacing?: CSS.LetterSpacingProperty<NumberOrString>;
-    readonly borderRadius?: CSS.BorderRadiusProperty<NumberOrString>;
-    readonly borderWidth?: CSS.BorderWidthProperty<NumberOrString>;
-    readonly borderTopWidth?: CSS.BorderTopWidthProperty<NumberOrString>;
-    readonly borderRightWidth?: CSS.BorderRightWidthProperty<NumberOrString>;
-    readonly borderBottomWidth?: CSS.BorderBottomWidthProperty<NumberOrString>;
-    readonly borderLeftWidth?: CSS.BorderLeftWidthProperty<NumberOrString>;
-    readonly borderStyle?: CSS.BorderBlockStyleProperty;
-    readonly borderTopStyle?: CSS.BorderTopStyleProperty;
-    readonly borderRightStyle?: CSS.BorderRightStyleProperty;
-    readonly borderBottomStyle?: CSS.BorderBottomStyleProperty;
-    readonly borderLeftStyle?: CSS.BorderLeftStyleProperty;
-    readonly borderColor?: ColorGroup | Color;
-    readonly borderTopColor?: ColorGroup | Color;
-    readonly borderRightColor?: ColorGroup | Color;
-    readonly borderBottomColor?: ColorGroup | Color;
-    readonly borderLeftColor?: ColorGroup | Color;
-    readonly backgroundColor?: ColorGroup | Color;
-    readonly textColor?: ColorGroup | Color;
-    readonly boxShadow?: CSS.BoxShadowProperty;
-    readonly width?: CSS.WidthProperty<NumberOrString>;
-    readonly minWidth?: CSS.WidthProperty<NumberOrString>;
-    readonly maxWidth?: CSS.WidthProperty<NumberOrString>;
-    readonly containerMinWidth?: CSS.WidthProperty<NumberOrString>;
-    readonly sizeMinWidth?: CSS.WidthProperty<NumberOrString>;
-    readonly containerMaxWidth?: CSS.WidthProperty<NumberOrString>;
-    readonly sizeMaxWidth?: CSS.WidthProperty<NumberOrString>;
-    readonly containerWidth?: CSS.WidthProperty<NumberOrString>;
-    readonly sizeWidth?: CSS.WidthProperty<NumberOrString>;
-    readonly height?: CSS.HeightProperty<NumberOrString>;
-    readonly minHeight?: CSS.HeightProperty<NumberOrString>;
-    readonly maxHeight?: CSS.HeightProperty<NumberOrString>;
-    readonly containerMinHeight?: CSS.HeightProperty<NumberOrString>;
-    readonly sizeMinHeight?: CSS.HeightProperty<NumberOrString>;
-    readonly containerMaxHeight?: CSS.HeightProperty<NumberOrString>;
-    readonly sizeMaxHeight?: CSS.HeightProperty<NumberOrString>;
-    readonly containerHeight?: CSS.HeightProperty<NumberOrString>;
-    readonly sizeHeight?: CSS.HeightProperty<NumberOrString>;
-    readonly textAlign?: CSS.TextAlignProperty;
-    readonly margin?: CSS.MarginProperty<NumberOrString>;
-    readonly marginX?: CSS.MarginProperty<NumberOrString>;
-    readonly marginY?: CSS.MarginProperty<NumberOrString>;
-    readonly marginTop?: CSS.MarginTopProperty<NumberOrString>;
-    readonly marginRight?: CSS.MarginRightProperty<NumberOrString>;
-    readonly marginBottom?: CSS.MarginBottomProperty<NumberOrString>;
-    readonly marginLeft?: CSS.MarginLeftProperty<NumberOrString>;
-    readonly padding?: CSS.PaddingProperty<NumberOrString>;
-    readonly paddingX?: CSS.PaddingProperty<NumberOrString>;
-    readonly paddingY?: CSS.PaddingProperty<NumberOrString>;
-    readonly paddingTop?: CSS.PaddingTopProperty<NumberOrString>;
-    readonly paddingRight?: CSS.PaddingRightProperty<NumberOrString>;
-    readonly paddingBottom?: CSS.PaddingBottomProperty<NumberOrString>;
-    readonly paddingLeft?: CSS.PaddingLeftProperty<NumberOrString>;
-    readonly cursor?: CSS.CursorProperty;
-    readonly overflow?: CSS.OverflowProperty;
-    readonly overflowX?: CSS.OverflowXProperty;
-    readonly overflowY?: CSS.OverflowYProperty;
+    readonly fontSize?: FontSize;
+    readonly fontFamily?: FontFamily;
+    readonly fontWeight?: FontWeight;
+    readonly lineHeight?: LineHeight;
+    readonly letterSpacing?: LetterSpacing;
+    readonly borderRadius?: BorderRadius;
+    readonly borderWidth?: BorderWidth;
+    readonly borderTopWidth?: BorderWidth;
+    readonly borderRightWidth?: BorderWidth;
+    readonly borderBottomWidth?: BorderWidth;
+    readonly borderLeftWidth?: BorderWidth;
+    readonly borderStyle?: BorderStyle;
+    readonly borderTopStyle?: BorderStyle;
+    readonly borderRightStyle?: BorderStyle;
+    readonly borderBottomStyle?: BorderStyle;
+    readonly borderLeftStyle?: BorderStyle;
+    readonly borderColor?: ColorOrColorGroup;
+    readonly borderTopColor?: ColorOrColorGroup;
+    readonly borderRightColor?: ColorOrColorGroup;
+    readonly borderBottomColor?: ColorOrColorGroup;
+    readonly borderLeftColor?: ColorOrColorGroup;
+    readonly backgroundColor?: ColorOrColorGroup;
+    readonly textColor?: ColorOrColorGroup;
+    readonly boxShadow?: BoxShadow;
+    readonly width?: WidthOrHeight;
+    readonly minWidth?: WidthOrHeight;
+    readonly maxWidth?: WidthOrHeight;
+    readonly containerMinWidth?: WidthOrHeight;
+    readonly sizeMinWidth?: WidthOrHeight;
+    readonly containerMaxWidth?: WidthOrHeight;
+    readonly sizeMaxWidth?: WidthOrHeight;
+    readonly containerWidth?: WidthOrHeight;
+    readonly sizeWidth?: WidthOrHeight;
+    readonly height?: WidthOrHeight;
+    readonly minHeight?: WidthOrHeight;
+    readonly maxHeight?: WidthOrHeight;
+    readonly containerMinHeight?: WidthOrHeight;
+    readonly sizeMinHeight?: WidthOrHeight;
+    readonly containerMaxHeight?: WidthOrHeight;
+    readonly sizeMaxHeight?: WidthOrHeight;
+    readonly containerHeight?: WidthOrHeight;
+    readonly sizeHeight?: WidthOrHeight;
+    readonly textAlign?: TextAlign;
+    readonly margin?: Margin;
+    readonly marginX?: Margin;
+    readonly marginY?: Margin;
+    readonly marginTop?: Margin;
+    readonly marginRight?: Margin;
+    readonly marginBottom?: Margin;
+    readonly marginLeft?: Margin;
+    readonly padding?: Padding;
+    readonly paddingX?: Padding;
+    readonly paddingY?: Padding;
+    readonly paddingTop?: Padding;
+    readonly paddingRight?: Padding;
+    readonly paddingBottom?: Padding;
+    readonly paddingLeft?: Padding;
+    readonly cursor?: Cursor;
+    readonly overflow?: Overflow;
+    readonly overflowX?: Overflow;
+    readonly overflowY?: Overflow;
     readonly breakpoints?: ThemeObject<Styles>;
     readonly pseudo?: ThemeObject<Styles>;
-    // TODO: better type integration with Theme
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [K: string]: any;
+    [K: string]: AnyStyleObject;
 }
