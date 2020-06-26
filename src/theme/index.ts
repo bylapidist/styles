@@ -39,7 +39,7 @@ export type FontFamily = CSS.FontFamilyProperty;
 
 export type FontSize = CSS.FontSizeProperty<NumberOrString>;
 
-export type FontWeight = CSS.FontWeightProperty;
+export type FontWeight = CSS.FontWeightProperty | NumberOrString;
 
 export type LetterSpacing = CSS.LetterSpacingProperty<NumberOrString>;
 
