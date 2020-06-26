@@ -51,6 +51,8 @@ export type TextAlign = CSS.TextAlignProperty;
 
 export type Cursor = CSS.CursorProperty;
 
+export type Opacity = CSS.OpacityProperty;
+
 export type Overflow =
     | CSS.OverflowProperty
     | CSS.OverflowXProperty

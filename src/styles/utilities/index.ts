@@ -52,5 +52,10 @@ export const withUtilities = (styles: Styles): string =>
             styleName: 'overflowY',
             propertyName: 'overflow-y',
             value: styles.overflowY
+        },
+        {
+            styleName: 'opacity',
+            propertyName: 'opacity',
+            value: styles.opacity
         }
     ]);

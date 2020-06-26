@@ -12,6 +12,7 @@ import {
     LineHeight,
     Margin,
     NumberOrString,
+    Opacity,
     Overflow,
     Padding,
     TextAlign,
@@ -93,6 +94,7 @@ export interface Styles {
     readonly overflow?: Overflow;
     readonly overflowX?: Overflow;
     readonly overflowY?: Overflow;
+    readonly opacity?: Opacity;
     readonly breakpoints?: ThemeObject<Styles>;
     readonly pseudo?: ThemeObject<Styles>;
     [K: string]: AnyStyleObject;
