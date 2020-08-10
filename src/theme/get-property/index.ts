@@ -17,7 +17,10 @@ const getColorFromColorGroup = <T>(
 
 const isColorGroup = (color?: NumberOrString | Color | ColorGroup): boolean => {
     if (typeof color !== 'object') return false;
-    return !!(color.group && color.shade);
+    return !!(
+        Object.prototype.hasOwnProperty.call(color, 'group') &&
+        Object.prototype.hasOwnProperty.call(color, 'shade')
+    );
 };
 
 export const getProperty = <T>(

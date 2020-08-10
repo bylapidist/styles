@@ -42,7 +42,7 @@
         "@types/jest": "^26.0.4",
         "@types/lodash.merge": "^4.6.6",
         "cross-env": "^7.0.2",
-        "csstype": "^2.6.11",
+        "csstype": "^3.0.2",
         "husky": "^4.2.5",
         "jest": "^26.1.0",
         "lint-staged": "^10.2.11",
