@@ -9,72 +9,72 @@ export type ThemeArray<T> = { [K: string]: T[] };
 
 export type NumberOrString = string | number | 0 | undefined;
 
-export type BorderRadius = CSS.BorderRadiusProperty<NumberOrString>;
+export type BorderRadius = CSS.Property.BorderRadius<NumberOrString>;
 
 export type BorderWidth =
-    | CSS.BorderWidthProperty<NumberOrString>
-    | CSS.BorderTopWidthProperty<NumberOrString>
-    | CSS.BorderRightWidthProperty<NumberOrString>
-    | CSS.BorderBottomWidthProperty<NumberOrString>
-    | CSS.BorderLeftWidthProperty<NumberOrString>;
+    | CSS.Property.BorderWidth<NumberOrString>
+    | CSS.Property.BorderTopWidth<NumberOrString>
+    | CSS.Property.BorderRightWidth<NumberOrString>
+    | CSS.Property.BorderBottomWidth<NumberOrString>
+    | CSS.Property.BorderLeftWidth<NumberOrString>;
 
 export type BorderStyle =
-    | CSS.BorderBlockStyleProperty
-    | CSS.BorderTopStyleProperty
-    | CSS.BorderRightStyleProperty
-    | CSS.BorderBottomStyleProperty
-    | CSS.BorderLeftStyleProperty;
+    | CSS.Property.BorderBlockStyle
+    | CSS.Property.BorderTopStyle
+    | CSS.Property.BorderRightStyle
+    | CSS.Property.BorderBottomStyle
+    | CSS.Property.BorderLeftStyle;
 
-export type BoxShadow = CSS.BoxShadowProperty;
+export type BoxShadow = CSS.Property.BoxShadow;
 
 export type Breakpoint = string;
 
 export type ColorGroup = { group: NumberOrString; shade: NumberOrString };
 
-export type Color = CSS.ColorProperty;
+export type Color = CSS.Property.Color;
 
 export type ColorOrColorGroup = Color | ColorGroup;
 
-export type FontFamily = CSS.FontFamilyProperty;
+export type FontFamily = CSS.Property.FontFamily;
 
-export type FontSize = CSS.FontSizeProperty<NumberOrString>;
+export type FontSize = CSS.Property.FontSize<NumberOrString>;
 
-export type FontWeight = CSS.FontWeightProperty | NumberOrString;
+export type FontWeight = CSS.Property.FontWeight | NumberOrString;
 
-export type LetterSpacing = CSS.LetterSpacingProperty<NumberOrString>;
+export type LetterSpacing = CSS.Property.LetterSpacing<NumberOrString>;
 
-export type LineHeight = CSS.LineHeightProperty<NumberOrString>;
+export type LineHeight = CSS.Property.LineHeight<NumberOrString>;
 
 export type Size = string;
 
-export type TextAlign = CSS.TextAlignProperty;
+export type TextAlign = CSS.Property.TextAlign;
 
-export type Cursor = CSS.CursorProperty;
+export type Cursor = CSS.Property.Cursor;
 
-export type Opacity = CSS.OpacityProperty;
+export type Opacity = CSS.Property.Opacity;
 
 export type Overflow =
-    | CSS.OverflowProperty
-    | CSS.OverflowXProperty
-    | CSS.OverflowYProperty;
+    | CSS.Property.Overflow
+    | CSS.Property.OverflowX
+    | CSS.Property.OverflowY;
 
 export type Margin =
-    | CSS.MarginProperty<NumberOrString>
-    | CSS.MarginTopProperty<NumberOrString>
-    | CSS.MarginRightProperty<NumberOrString>
-    | CSS.MarginBottomProperty<NumberOrString>
-    | CSS.MarginLeftProperty<NumberOrString>;
+    | CSS.Property.Margin<NumberOrString>
+    | CSS.Property.MarginTop<NumberOrString>
+    | CSS.Property.MarginRight<NumberOrString>
+    | CSS.Property.MarginBottom<NumberOrString>
+    | CSS.Property.MarginLeft<NumberOrString>;
 
 export type Padding =
-    | CSS.PaddingProperty<NumberOrString>
-    | CSS.PaddingTopProperty<NumberOrString>
-    | CSS.PaddingRightProperty<NumberOrString>
-    | CSS.PaddingBottomProperty<NumberOrString>
-    | CSS.PaddingLeftProperty<NumberOrString>;
+    | CSS.Property.Padding<NumberOrString>
+    | CSS.Property.PaddingTop<NumberOrString>
+    | CSS.Property.PaddingRight<NumberOrString>
+    | CSS.Property.PaddingBottom<NumberOrString>
+    | CSS.Property.PaddingLeft<NumberOrString>;
 
 export type WidthOrHeight =
-    | CSS.WidthProperty<NumberOrString>
-    | CSS.HeightProperty<NumberOrString>;
+    | CSS.Property.Width<NumberOrString>
+    | CSS.Property.Height<NumberOrString>;
 
 export type ThemeObjects =
     | ColorOrColorGroup
