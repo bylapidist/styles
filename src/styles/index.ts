@@ -11,16 +11,28 @@ export interface StyleMap {
     [K: string]: NumberOrString | undefined;
 }
 
-type CSSOmitProperties = CSS.StandardProperties & {
+type CSSOmitBorderColor = Omit<CSS.StandardProperties, 'borderColor'>;
+
+type CSSOmitBorderTopColor = Omit<CSSOmitBorderColor, 'borderTopColor'>;
+
+type CSSOmitBorderRightColor = Omit<CSSOmitBorderTopColor, 'borderRightColor'>;
+
+type CSSOmitBorderBottomColor = Omit<
+    CSSOmitBorderRightColor,
+    'borderBottomColor'
+>;
+
+type CSSOmitBorderLeftColor = Omit<CSSOmitBorderBottomColor, 'borderLeftColor'>;
+
+type CSSBaseProperties = Omit<CSSOmitBorderLeftColor, 'backgroundColor'>;
+
+export interface Styles extends CSSBaseProperties {
     readonly borderColor?: ColorOrColorGroup;
     readonly borderTopColor?: ColorOrColorGroup;
     readonly borderRightColor?: ColorOrColorGroup;
     readonly borderBottomColor?: ColorOrColorGroup;
     readonly borderLeftColor?: ColorOrColorGroup;
     readonly backgroundColor?: ColorOrColorGroup;
-};
-
-export interface Styles extends CSSOmitProperties {
     readonly containerMinWidth?: CSS.Property.MinWidth<NumberOrString>;
     readonly sizeMinWidth?: CSS.Property.MinWidth<NumberOrString>;
     readonly containerMaxWidth?: CSS.Property.MaxWidth<NumberOrString>;
