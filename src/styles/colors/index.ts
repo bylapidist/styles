@@ -1,5 +1,6 @@
+import * as CSS from 'csstype';
 import { Styles } from '../index';
-import { Color, Theme } from '../../theme';
+import { Theme } from '../../theme';
 import { filterToProperties } from '../../theme/filter-to-properties';
 import { getProperty } from '../../theme/get-property';
 
@@ -8,7 +9,7 @@ export const withColors = (theme: Theme, styles: Styles): string =>
         {
             styleName: 'backgroundColor',
             propertyName: 'background-color',
-            value: getProperty<Color>(
+            value: getProperty<CSS.Property.Color>(
                 theme,
                 'backgroundColor',
                 styles.backgroundColor
@@ -17,17 +18,25 @@ export const withColors = (theme: Theme, styles: Styles): string =>
         {
             styleName: 'textColor',
             propertyName: 'color',
-            value: getProperty<Color>(theme, 'textColor', styles.textColor)
+            value: getProperty<CSS.Property.Color>(
+                theme,
+                'textColor',
+                styles.textColor
+            )
         },
         {
             styleName: 'borderColor',
             propertyName: 'border-color',
-            value: getProperty<Color>(theme, 'borderColor', styles.borderColor)
+            value: getProperty<CSS.Property.Color>(
+                theme,
+                'borderColor',
+                styles.borderColor
+            )
         },
         {
             styleName: 'borderTopColor',
             propertyName: 'border-top-color',
-            value: getProperty<Color>(
+            value: getProperty<CSS.Property.Color>(
                 theme,
                 'borderTopColor',
                 styles.borderTopColor
@@ -36,7 +45,7 @@ export const withColors = (theme: Theme, styles: Styles): string =>
         {
             styleName: 'borderRightColor',
             propertyName: 'border-right-color',
-            value: getProperty<Color>(
+            value: getProperty<CSS.Property.Color>(
                 theme,
                 'borderRightColor',
                 styles.borderRightColor
@@ -45,7 +54,7 @@ export const withColors = (theme: Theme, styles: Styles): string =>
         {
             styleName: 'borderBottomColor',
             propertyName: 'border-bottom-color',
-            value: getProperty<Color>(
+            value: getProperty<CSS.Property.Color>(
                 theme,
                 'borderBottomColor',
                 styles.borderBottomColor
@@ -54,7 +63,7 @@ export const withColors = (theme: Theme, styles: Styles): string =>
         {
             styleName: 'borderLeftColor',
             propertyName: 'border-left-color',
-            value: getProperty<Color>(
+            value: getProperty<CSS.Property.Color>(
                 theme,
                 'borderLeftColor',
                 styles.borderLeftColor
