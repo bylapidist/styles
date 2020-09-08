@@ -1,5 +1,6 @@
+import * as CSS from 'csstype';
 import { Styles } from '../index';
-import { Margin, Padding, Theme } from '../../theme';
+import { NumberOrString, Theme } from '../../theme';
 import { filterToProperties } from '../../theme/filter-to-properties';
 import { getProperty } from '../../theme/get-property';
 
@@ -8,91 +9,163 @@ export const withLayout = (theme: Theme, styles: Styles): string =>
         {
             styleName: 'margin',
             propertyName: 'margin',
-            value: getProperty<Margin>(theme, 'sizes', styles.margin)
+            value: getProperty<CSS.Property.Margin<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.margin
+            )
         },
         {
             styleName: 'marginX',
             propertyName: 'margin-left',
-            value: getProperty<Margin>(theme, 'sizes', styles.marginX)
+            value: getProperty<CSS.Property.MarginLeft<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.marginX
+            )
         },
         {
             styleName: 'marginX',
             propertyName: 'margin-right',
-            value: getProperty<Margin>(theme, 'sizes', styles.marginX)
+            value: getProperty<CSS.Property.MarginRight<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.marginX
+            )
         },
         {
             styleName: 'marginY',
             propertyName: 'margin-top',
-            value: getProperty<Margin>(theme, 'sizes', styles.marginY)
+            value: getProperty<CSS.Property.MarginTop<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.marginY
+            )
         },
         {
             styleName: 'marginY',
             propertyName: 'margin-bottom',
-            value: getProperty<Margin>(theme, 'sizes', styles.marginY)
+            value: getProperty<CSS.Property.MarginBottom<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.marginY
+            )
         },
         {
             styleName: 'marginTop',
             propertyName: 'margin-top',
-            value: getProperty<Margin>(theme, 'sizes', styles.marginTop)
+            value: getProperty<CSS.Property.MarginTop<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.marginTop
+            )
         },
         {
             styleName: 'marginLeft',
             propertyName: 'margin-left',
-            value: getProperty<Margin>(theme, 'sizes', styles.marginLeft)
+            value: getProperty<CSS.Property.MarginLeft<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.marginLeft
+            )
         },
         {
             styleName: 'marginBottom',
             propertyName: 'margin-bottom',
-            value: getProperty<Margin>(theme, 'sizes', styles.marginBottom)
+            value: getProperty<CSS.Property.MarginBottom<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.marginBottom
+            )
         },
         {
             styleName: 'marginRight',
             propertyName: 'margin-right',
-            value: getProperty<Margin>(theme, 'sizes', styles.marginRight)
+            value: getProperty<CSS.Property.MarginRight<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.marginRight
+            )
         },
         {
             styleName: 'padding',
             propertyName: 'padding',
-            value: getProperty<Padding>(theme, 'sizes', styles.padding)
+            value: getProperty<CSS.Property.Padding<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.padding
+            )
         },
         {
             styleName: 'paddingX',
             propertyName: 'padding-left',
-            value: getProperty<Padding>(theme, 'sizes', styles.paddingX)
+            value: getProperty<CSS.Property.PaddingLeft<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.paddingX
+            )
         },
         {
             styleName: 'paddingX',
             propertyName: 'padding-right',
-            value: getProperty<Padding>(theme, 'sizes', styles.paddingX)
+            value: getProperty<CSS.Property.PaddingRight<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.paddingX
+            )
         },
         {
             styleName: 'paddingY',
             propertyName: 'padding-top',
-            value: getProperty<Padding>(theme, 'sizes', styles.paddingY)
+            value: getProperty<CSS.Property.PaddingTop<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.paddingY
+            )
         },
         {
             styleName: 'paddingY',
             propertyName: 'padding-bottom',
-            value: getProperty<Padding>(theme, 'sizes', styles.paddingY)
+            value: getProperty<CSS.Property.PaddingBottom<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.paddingY
+            )
         },
         {
             styleName: 'paddingTop',
             propertyName: 'padding-top',
-            value: getProperty<Padding>(theme, 'sizes', styles.paddingTop)
+            value: getProperty<CSS.Property.PaddingTop<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.paddingTop
+            )
         },
         {
             styleName: 'paddingRight',
             propertyName: 'padding-right',
-            value: getProperty<Padding>(theme, 'sizes', styles.paddingRight)
+            value: getProperty<CSS.Property.PaddingRight<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.paddingRight
+            )
         },
         {
             styleName: 'paddingBottom',
             propertyName: 'padding-bottom',
-            value: getProperty<Padding>(theme, 'sizes', styles.paddingBottom)
+            value: getProperty<CSS.Property.PaddingBottom<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.paddingBottom
+            )
         },
         {
             styleName: 'paddingLeft',
             propertyName: 'padding-left',
-            value: getProperty<Padding>(theme, 'sizes', styles.paddingLeft)
+            value: getProperty<CSS.Property.PaddingLeft<NumberOrString>>(
+                theme,
+                'sizes',
+                styles.paddingLeft
+            )
         }
     ]);

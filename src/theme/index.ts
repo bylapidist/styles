@@ -9,90 +9,14 @@ export type ThemeArray<T> = { [K: string]: T[] };
 
 export type NumberOrString = string | number | 0 | undefined;
 
-export type BorderRadius = CSS.Property.BorderRadius<NumberOrString>;
-
-export type BorderWidth =
-    | CSS.Property.BorderWidth<NumberOrString>
-    | CSS.Property.BorderTopWidth<NumberOrString>
-    | CSS.Property.BorderRightWidth<NumberOrString>
-    | CSS.Property.BorderBottomWidth<NumberOrString>
-    | CSS.Property.BorderLeftWidth<NumberOrString>;
-
-export type BorderStyle =
-    | CSS.Property.BorderBlockStyle
-    | CSS.Property.BorderTopStyle
-    | CSS.Property.BorderRightStyle
-    | CSS.Property.BorderBottomStyle
-    | CSS.Property.BorderLeftStyle;
-
-export type BoxShadow = CSS.Property.BoxShadow;
-
-export type Breakpoint = string;
-
 export type ColorGroup = { group: NumberOrString; shade: NumberOrString };
 
-export type Color = CSS.Property.Color;
-
-export type ColorOrColorGroup = Color | ColorGroup;
-
-export type FontFamily = CSS.Property.FontFamily;
-
-export type FontSize = CSS.Property.FontSize<NumberOrString>;
-
-export type FontWeight = CSS.Property.FontWeight | NumberOrString;
-
-export type LetterSpacing = CSS.Property.LetterSpacing<NumberOrString>;
-
-export type LineHeight = CSS.Property.LineHeight<NumberOrString>;
-
-export type Size = string;
-
-export type TextAlign = CSS.Property.TextAlign;
-
-export type Cursor = CSS.Property.Cursor;
-
-export type Opacity = CSS.Property.Opacity;
-
-export type Overflow =
-    | CSS.Property.Overflow
-    | CSS.Property.OverflowX
-    | CSS.Property.OverflowY;
-
-export type Margin =
-    | CSS.Property.Margin<NumberOrString>
-    | CSS.Property.MarginTop<NumberOrString>
-    | CSS.Property.MarginRight<NumberOrString>
-    | CSS.Property.MarginBottom<NumberOrString>
-    | CSS.Property.MarginLeft<NumberOrString>;
-
-export type Padding =
-    | CSS.Property.Padding<NumberOrString>
-    | CSS.Property.PaddingTop<NumberOrString>
-    | CSS.Property.PaddingRight<NumberOrString>
-    | CSS.Property.PaddingBottom<NumberOrString>
-    | CSS.Property.PaddingLeft<NumberOrString>;
-
-export type WidthOrHeight =
-    | CSS.Property.Width<NumberOrString>
-    | CSS.Property.Height<NumberOrString>;
+export type ColorOrColorGroup = CSS.Property.Color | ColorGroup;
 
 export type ThemeObjects =
     | ColorOrColorGroup
     | NumberOrString
-    | Breakpoint
-    | FontSize
-    | FontFamily
-    | FontWeight
-    | LineHeight
-    | LetterSpacing
-    | Size
-    | Margin
-    | Padding
-    | BorderRadius
-    | BorderWidth
-    | BoxShadow
-    | WidthOrHeight
-    | ThemeObject<Color>;
+    | ThemeObject<CSS.Property.Color>;
 
 export type AnyThemeObject =
     | ThemeObject<ThemeObjects>
@@ -100,17 +24,27 @@ export type AnyThemeObject =
     | undefined;
 
 export interface Theme {
-    readonly breakpoints?: ThemeObject<Breakpoint>;
-    readonly fontSizes?: ThemeObject<FontSize>;
-    readonly fontFamilies?: ThemeArray<FontFamily>;
-    readonly fontWeights?: ThemeObject<FontWeight>;
-    readonly lineHeights?: ThemeObject<LineHeight>;
-    readonly letterSpacings?: ThemeObject<LetterSpacing>;
-    readonly sizes?: ThemeObject<Size>;
-    readonly borderRadii?: ThemeObject<BorderRadius>;
-    readonly borderWidths?: ThemeObject<BorderWidth>;
-    readonly boxShadows?: ThemeObject<BoxShadow>;
-    readonly widths?: ThemeObject<WidthOrHeight>;
-    readonly colors?: ThemeObject<ThemeObject<Color>>;
+    readonly breakpoints?: ThemeObject<string>;
+    readonly fontSizes?: ThemeObject<CSS.Property.FontSize>;
+    readonly fontFamilies?: ThemeArray<CSS.Property.FontFamily>;
+    readonly fontWeights?: ThemeObject<CSS.Property.FontWeight>;
+    readonly lineHeights?: ThemeObject<CSS.Property.LineHeight<NumberOrString>>;
+    readonly letterSpacings?: ThemeObject<
+        CSS.Property.LetterSpacing<NumberOrString>
+    >;
+    readonly sizes?: ThemeObject<string>;
+    readonly borderRadii?: ThemeObject<
+        CSS.Property.BorderRadius<NumberOrString>
+    >;
+    readonly borderWidths?: ThemeObject<
+        | CSS.Property.BorderWidth<NumberOrString>
+        | CSS.Property.BorderTopWidth<NumberOrString>
+        | CSS.Property.BorderRightWidth<NumberOrString>
+        | CSS.Property.BorderBottomWidth<NumberOrString>
+        | CSS.Property.BorderLeftWidth<NumberOrString>
+    >;
+    readonly boxShadows?: ThemeObject<CSS.Property.BoxShadow>;
+    readonly widths?: ThemeObject<CSS.Property.Width<NumberOrString>>;
+    readonly colors?: ThemeObject<ThemeObject<CSS.Property.Color>>;
     [K: string]: AnyThemeObject;
 }

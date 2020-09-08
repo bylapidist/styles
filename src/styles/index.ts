@@ -1,29 +1,8 @@
-import {
-    BorderRadius,
-    BorderStyle,
-    BorderWidth,
-    BoxShadow,
-    ColorOrColorGroup,
-    Cursor,
-    FontFamily,
-    FontSize,
-    FontWeight,
-    LetterSpacing,
-    LineHeight,
-    Margin,
-    NumberOrString,
-    Opacity,
-    Overflow,
-    Padding,
-    TextAlign,
-    ThemeObject,
-    ThemeObjects,
-    WidthOrHeight
-} from '../theme';
+import * as CSS from 'csstype';
+
+import { ColorOrColorGroup, NumberOrString, ThemeObject } from '../theme';
 
 export * from './styles';
-
-export type AnyStyleObject = ThemeObjects | ThemeObject<Styles> | undefined;
 
 export interface StyleMap {
     readonly styleName: string;
@@ -32,70 +11,53 @@ export interface StyleMap {
     [K: string]: NumberOrString | undefined;
 }
 
-export interface Styles {
-    readonly fontSize?: FontSize;
-    readonly fontFamily?: FontFamily;
-    readonly fontWeight?: FontWeight;
-    readonly lineHeight?: LineHeight;
-    readonly letterSpacing?: LetterSpacing;
-    readonly borderRadius?: BorderRadius;
-    readonly borderWidth?: BorderWidth;
-    readonly borderTopWidth?: BorderWidth;
-    readonly borderRightWidth?: BorderWidth;
-    readonly borderBottomWidth?: BorderWidth;
-    readonly borderLeftWidth?: BorderWidth;
-    readonly borderStyle?: BorderStyle;
-    readonly borderTopStyle?: BorderStyle;
-    readonly borderRightStyle?: BorderStyle;
-    readonly borderBottomStyle?: BorderStyle;
-    readonly borderLeftStyle?: BorderStyle;
+type CSSOmitBorderColor = Omit<CSS.StandardProperties, 'borderColor'>;
+
+type CSSOmitBorderTopColor = Omit<CSSOmitBorderColor, 'borderTopColor'>;
+
+type CSSOmitBorderRightColor = Omit<CSSOmitBorderTopColor, 'borderRightColor'>;
+
+type CSSOmitBorderBottomColor = Omit<
+    CSSOmitBorderRightColor,
+    'borderBottomColor'
+>;
+
+type CSSOmitBorderLeftColor = Omit<CSSOmitBorderBottomColor, 'borderLeftColor'>;
+
+type CSSBaseProperties = Omit<CSSOmitBorderLeftColor, 'backgroundColor'>;
+
+export interface Styles extends CSSBaseProperties {
     readonly borderColor?: ColorOrColorGroup;
     readonly borderTopColor?: ColorOrColorGroup;
     readonly borderRightColor?: ColorOrColorGroup;
     readonly borderBottomColor?: ColorOrColorGroup;
     readonly borderLeftColor?: ColorOrColorGroup;
     readonly backgroundColor?: ColorOrColorGroup;
+    readonly containerMinWidth?: CSS.Property.MinWidth<NumberOrString>;
+    readonly sizeMinWidth?: CSS.Property.MinWidth<NumberOrString>;
+    readonly containerMaxWidth?: CSS.Property.MaxWidth<NumberOrString>;
+    readonly sizeMaxWidth?: CSS.Property.MaxWidth<NumberOrString>;
+    readonly containerWidth?: CSS.Property.Width<NumberOrString>;
+    readonly sizeWidth?: CSS.Property.Width<NumberOrString>;
+    readonly containerMinHeight?: CSS.Property.MinHeight<NumberOrString>;
+    readonly sizeMinHeight?: CSS.Property.MinHeight<NumberOrString>;
+    readonly containerMaxHeight?: CSS.Property.MaxHeight<NumberOrString>;
+    readonly sizeMaxHeight?: CSS.Property.MaxHeight<NumberOrString>;
+    readonly containerHeight?: CSS.Property.Height<NumberOrString>;
+    readonly sizeHeight?: CSS.Property.Height<NumberOrString>;
     readonly textColor?: ColorOrColorGroup;
-    readonly boxShadow?: BoxShadow;
-    readonly width?: WidthOrHeight;
-    readonly minWidth?: WidthOrHeight;
-    readonly maxWidth?: WidthOrHeight;
-    readonly containerMinWidth?: WidthOrHeight;
-    readonly sizeMinWidth?: WidthOrHeight;
-    readonly containerMaxWidth?: WidthOrHeight;
-    readonly sizeMaxWidth?: WidthOrHeight;
-    readonly containerWidth?: WidthOrHeight;
-    readonly sizeWidth?: WidthOrHeight;
-    readonly height?: WidthOrHeight;
-    readonly minHeight?: WidthOrHeight;
-    readonly maxHeight?: WidthOrHeight;
-    readonly containerMinHeight?: WidthOrHeight;
-    readonly sizeMinHeight?: WidthOrHeight;
-    readonly containerMaxHeight?: WidthOrHeight;
-    readonly sizeMaxHeight?: WidthOrHeight;
-    readonly containerHeight?: WidthOrHeight;
-    readonly sizeHeight?: WidthOrHeight;
-    readonly textAlign?: TextAlign;
-    readonly margin?: Margin;
-    readonly marginX?: Margin;
-    readonly marginY?: Margin;
-    readonly marginTop?: Margin;
-    readonly marginRight?: Margin;
-    readonly marginBottom?: Margin;
-    readonly marginLeft?: Margin;
-    readonly padding?: Padding;
-    readonly paddingX?: Padding;
-    readonly paddingY?: Padding;
-    readonly paddingTop?: Padding;
-    readonly paddingRight?: Padding;
-    readonly paddingBottom?: Padding;
-    readonly paddingLeft?: Padding;
-    readonly cursor?: Cursor;
-    readonly overflow?: Overflow;
-    readonly overflowX?: Overflow;
-    readonly overflowY?: Overflow;
-    readonly opacity?: Opacity;
+    readonly marginX?:
+        | CSS.Property.MarginLeft<NumberOrString>
+        | CSS.Property.MarginRight<NumberOrString>;
+    readonly marginY?:
+        | CSS.Property.MarginTop<NumberOrString>
+        | CSS.Property.MarginBottom<NumberOrString>;
+    readonly paddingX?:
+        | CSS.Property.PaddingLeft<NumberOrString>
+        | CSS.Property.PaddingRight<NumberOrString>;
+    readonly paddingY?:
+        | CSS.Property.PaddingTop<NumberOrString>
+        | CSS.Property.PaddingBottom<NumberOrString>;
     readonly breakpoints?: ThemeObject<Styles>;
     readonly pseudo?: ThemeObject<Styles>;
-    [K: string]: AnyStyleObject;
 }

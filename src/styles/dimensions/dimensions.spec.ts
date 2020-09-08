@@ -80,7 +80,7 @@ test('it renders the correct value', () => {
 
 test('it passes through unknown props', () => {
     const styles: Styles = {
-        width: 1,
+        width: '1',
         sizeWidth: 'invalid',
         containerWidth: '1/2'
     };

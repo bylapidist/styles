@@ -1,5 +1,6 @@
+import * as CSS from 'csstype';
 import { Styles } from '../index';
-import { BorderRadius, BorderWidth, Theme } from '../../theme';
+import { NumberOrString, Theme } from '../../theme';
 import { filterToProperties } from '../../theme/filter-to-properties';
 import { getProperty } from '../../theme/get-property';
 
@@ -8,7 +9,7 @@ export const withBorders = (theme: Theme, styles: Styles): string =>
         {
             styleName: 'borderRadius',
             propertyName: 'border-radius',
-            value: getProperty<BorderRadius>(
+            value: getProperty<CSS.Property.BorderRadius<NumberOrString>>(
                 theme,
                 'borderRadii',
                 styles.borderRadius
@@ -17,7 +18,7 @@ export const withBorders = (theme: Theme, styles: Styles): string =>
         {
             styleName: 'borderWidth',
             propertyName: 'border-width',
-            value: getProperty<BorderWidth>(
+            value: getProperty<CSS.Property.BorderWidth<NumberOrString>>(
                 theme,
                 'borderWidths',
                 styles.borderWidth
@@ -26,7 +27,7 @@ export const withBorders = (theme: Theme, styles: Styles): string =>
         {
             styleName: 'borderTopWidth',
             propertyName: 'border-top-width',
-            value: getProperty<BorderWidth>(
+            value: getProperty<CSS.Property.BorderTopWidth<NumberOrString>>(
                 theme,
                 'borderWidths',
                 styles.borderTopWidth
@@ -35,7 +36,7 @@ export const withBorders = (theme: Theme, styles: Styles): string =>
         {
             styleName: 'borderRightWidth',
             propertyName: 'border-right-width',
-            value: getProperty<BorderWidth>(
+            value: getProperty<CSS.Property.BorderRightWidth<NumberOrString>>(
                 theme,
                 'borderWidths',
                 styles.borderRightWidth
@@ -44,7 +45,7 @@ export const withBorders = (theme: Theme, styles: Styles): string =>
         {
             styleName: 'borderBottomWidth',
             propertyName: 'border-bottom-width',
-            value: getProperty<BorderWidth>(
+            value: getProperty<CSS.Property.BorderBottomWidth<NumberOrString>>(
                 theme,
                 'borderWidths',
                 styles.borderBottomWidth
@@ -53,7 +54,7 @@ export const withBorders = (theme: Theme, styles: Styles): string =>
         {
             styleName: 'borderLeftWidth',
             propertyName: 'border-left-width',
-            value: getProperty<BorderWidth>(
+            value: getProperty<CSS.Property.BorderLeftWidth<NumberOrString>>(
                 theme,
                 'borderWidths',
                 styles.borderLeftWidth
@@ -62,7 +63,7 @@ export const withBorders = (theme: Theme, styles: Styles): string =>
         {
             styleName: 'boxShadow',
             propertyName: 'box-shadow',
-            value: getProperty<BorderWidth>(
+            value: getProperty<CSS.Property.BoxShadow>(
                 theme,
                 'boxShadows',
                 styles.boxShadow

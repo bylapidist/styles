@@ -1,6 +1,6 @@
+import * as CSS from 'csstype';
 import {
     AnyThemeObject,
-    Color,
     ColorGroup,
     NumberOrString,
     Theme,
@@ -15,7 +15,9 @@ const getColorFromColorGroup = <T>(
     return (colors[group][shade] as unknown) as T;
 };
 
-const isColorGroup = (color?: NumberOrString | Color | ColorGroup): boolean => {
+const isColorGroup = (
+    color?: NumberOrString | CSS.Property.Color | ColorGroup
+): boolean => {
     if (typeof color !== 'object') return false;
     return !!(
         Object.prototype.hasOwnProperty.call(color, 'group') &&
@@ -26,7 +28,7 @@ const isColorGroup = (color?: NumberOrString | Color | ColorGroup): boolean => {
 export const getProperty = <T>(
     theme: Theme,
     property: string,
-    value?: NumberOrString | Color | ColorGroup
+    value?: NumberOrString | CSS.Property.Color | ColorGroup
 ): T => {
     const propertyGroup: AnyThemeObject = theme[property];
 

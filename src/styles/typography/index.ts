@@ -1,12 +1,6 @@
+import * as CSS from 'csstype';
 import { Styles } from '../index';
-import {
-    FontFamily,
-    FontSize,
-    LetterSpacing,
-    LineHeight,
-    Theme,
-    FontWeight
-} from '../../theme';
+import { NumberOrString, Theme } from '../../theme';
 import { filterToProperties } from '../../theme/filter-to-properties';
 import { getProperty } from '../../theme/get-property';
 
@@ -15,12 +9,16 @@ export const withTypography = (theme: Theme, styles: Styles): string =>
         {
             styleName: 'fontSize',
             propertyName: 'font-size',
-            value: getProperty<FontSize>(theme, 'fontSizes', styles.fontSize)
+            value: getProperty<CSS.Property.FontSize>(
+                theme,
+                'fontSizes',
+                styles.fontSize
+            )
         },
         {
             styleName: 'fontWeight',
             propertyName: 'font-weight',
-            value: getProperty<FontWeight>(
+            value: getProperty<CSS.Property.FontWeight>(
                 theme,
                 'fontWeights',
                 styles.fontWeight
@@ -29,7 +27,7 @@ export const withTypography = (theme: Theme, styles: Styles): string =>
         {
             styleName: 'fontFamily',
             propertyName: 'font-family',
-            value: getProperty<FontFamily>(
+            value: getProperty<CSS.Property.FontFamily>(
                 theme,
                 'fontFamilies',
                 styles.fontFamily
@@ -38,7 +36,7 @@ export const withTypography = (theme: Theme, styles: Styles): string =>
         {
             styleName: 'lineHeight',
             propertyName: 'line-height',
-            value: getProperty<LineHeight>(
+            value: getProperty<CSS.Property.LineHeight<NumberOrString>>(
                 theme,
                 'lineHeights',
                 styles.lineHeight
@@ -47,7 +45,7 @@ export const withTypography = (theme: Theme, styles: Styles): string =>
         {
             styleName: 'letterSpacing',
             propertyName: 'letter-spacing',
-            value: getProperty<LetterSpacing>(
+            value: getProperty<CSS.Property.LetterSpacing<NumberOrString>>(
                 theme,
                 'letterSpacings',
                 styles.letterSpacing
