@@ -27,10 +27,14 @@ export interface Theme {
     readonly breakpoints?: ThemeObject<string>;
     readonly fontSizes?: ThemeObject<CSS.Property.FontSize>;
     readonly fontFamilies?: ThemeArray<CSS.Property.FontFamily>;
-    readonly fontWeights?: ThemeObject<CSS.Property.FontWeight>;
-    readonly lineHeights?: ThemeObject<CSS.Property.LineHeight<NumberOrString>>;
+    readonly fontWeights?: ThemeObject<
+        CSS.Property.FontWeight | NumberOrString
+    >;
+    readonly lineHeights?: ThemeObject<
+        CSS.Property.LineHeight<NumberOrString> | NumberOrString
+    >;
     readonly letterSpacings?: ThemeObject<
-        CSS.Property.LetterSpacing<NumberOrString>
+        CSS.Property.LetterSpacing<NumberOrString> | NumberOrString
     >;
     readonly sizes?: ThemeObject<string>;
     readonly borderRadii?: ThemeObject<
