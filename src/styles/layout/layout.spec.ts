@@ -42,7 +42,7 @@ test('it renders the correct value', () => {
 
 test('it passes through unknown props', () => {
     const styles: Styles = {
-        margin: -1,
+        margin: '-1',
         paddingX: '40px'
     };
 

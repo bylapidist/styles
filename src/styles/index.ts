@@ -1,6 +1,6 @@
 import * as CSS from 'csstype';
 
-import { NumberOrString, ThemeObject } from '../theme';
+import { ColorOrColorGroup, NumberOrString, ThemeObject } from '../theme';
 
 export * from './styles';
 
@@ -11,7 +11,16 @@ export interface StyleMap {
     [K: string]: NumberOrString | undefined;
 }
 
-export interface Styles extends CSS.StandardProperties {
+type CSSOmitProperties = CSS.StandardProperties & {
+    readonly borderColor?: ColorOrColorGroup;
+    readonly borderTopColor?: ColorOrColorGroup;
+    readonly borderRightColor?: ColorOrColorGroup;
+    readonly borderBottomColor?: ColorOrColorGroup;
+    readonly borderLeftColor?: ColorOrColorGroup;
+    readonly backgroundColor?: ColorOrColorGroup;
+};
+
+export interface Styles extends CSSOmitProperties {
     readonly containerMinWidth?: CSS.Property.MinWidth<NumberOrString>;
     readonly sizeMinWidth?: CSS.Property.MinWidth<NumberOrString>;
     readonly containerMaxWidth?: CSS.Property.MaxWidth<NumberOrString>;
@@ -24,7 +33,7 @@ export interface Styles extends CSS.StandardProperties {
     readonly sizeMaxHeight?: CSS.Property.MaxHeight<NumberOrString>;
     readonly containerHeight?: CSS.Property.Height<NumberOrString>;
     readonly sizeHeight?: CSS.Property.Height<NumberOrString>;
-    readonly textColor?: CSS.Property.Color;
+    readonly textColor?: ColorOrColorGroup;
     readonly marginX?:
         | CSS.Property.MarginLeft<NumberOrString>
         | CSS.Property.MarginRight<NumberOrString>;

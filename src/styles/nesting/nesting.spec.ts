@@ -21,10 +21,10 @@ test('it renders the correct value', () => {
     const styles: Styles = {
         pseudo: {
             ':hover': {
-                fontSize: 2
+                fontSize: '2'
             },
             ':focus': {
-                fontSize: 3
+                fontSize: '3'
             }
         }
     };
