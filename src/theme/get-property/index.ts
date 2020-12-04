@@ -42,9 +42,9 @@ export const getProperty = <T>(
 
     if (value && propertyGroup && propertyGroup[value as string]) {
         if (Array.isArray(propertyGroup[value as string])) {
-            return (((propertyGroup[value as string] as unknown) as Array<
-                T
-            >).join(', ') as unknown) as T;
+            return (((propertyGroup[
+                value as string
+            ] as unknown) as Array<T>).join(', ') as unknown) as T;
         }
 
         return (propertyGroup[value as string] as unknown) as T;
