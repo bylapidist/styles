@@ -57,5 +57,10 @@ export const withUtilities = (styles: Styles): string =>
             styleName: 'opacity',
             propertyName: 'opacity',
             value: styles.opacity
+        },
+        {
+            styleName: 'display',
+            propertyName: 'display',
+            value: styles.display
         }
     ]);
