@@ -62,5 +62,10 @@ export const withUtilities = (styles: Styles): string =>
             styleName: 'display',
             propertyName: 'display',
             value: styles.display
+        },
+        {
+            styleName: 'flex',
+            propertyName: 'flex',
+            value: styles.flex
         }
     ]);
