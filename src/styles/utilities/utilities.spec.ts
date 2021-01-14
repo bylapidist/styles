@@ -14,12 +14,13 @@ test('it renders the correct value', () => {
         borderBottomStyle: 'solid',
         borderLeftStyle: 'solid',
         display: 'flex',
-        flex: '1 1 0%'
+        flex: '1 1 0%',
+        flexWrap: 'wrap'
     };
 
     const values = withUtilities(styles);
     const expected =
-        'border-style: solid;border-top-style: dashed;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;text-align: center;cursor: pointer;overflow: auto;overflow-x: scroll;overflow-y: hidden;display: flex;flex: 1 1 0%;';
+        'border-style: solid;border-top-style: dashed;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;text-align: center;cursor: pointer;overflow: auto;overflow-x: scroll;overflow-y: hidden;display: flex;flex: 1 1 0%;flex-wrap: wrap;';
 
     expect(values).toEqual(expected);
 });

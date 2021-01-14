@@ -67,5 +67,10 @@ export const withUtilities = (styles: Styles): string =>
             styleName: 'flex',
             propertyName: 'flex',
             value: styles.flex
+        },
+        {
+            styleName: 'flexWrap',
+            propertyName: 'flex-wrap',
+            value: styles.flexWrap
         }
     ]);
