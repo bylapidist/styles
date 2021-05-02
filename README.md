@@ -7,7 +7,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/d28f67acb582d5705333/maintainability)](https://codeclimate.com/github/bylapidist/styles/maintainability)
 [![Node](https://img.shields.io/node/v/@lapidist/styles)](https://www.npmjs.com/package/@lapidist/components)
 [![GitHub Issues](https://img.shields.io/github/issues/bylapidist/styles.svg?style=flat)](https://github.com/bylapidist/styles/issues)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=bylapidist/styles)](https://dependabot.com)
 ![GitHub](https://img.shields.io/github/license/bylapidist/styles)
 [![GitHub Release](https://img.shields.io/github/release/bylapidist/styles.svg?style=flat)](https://github.com/bylapidist/styles/releases)
 [![Build Status](https://github.com/bylapidist/styles/workflows/Release/badge.svg)](https://github.com/bylapidist/styles/actions?query=workflow%3ARelease)
