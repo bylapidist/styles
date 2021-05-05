@@ -38,17 +38,17 @@
         "lodash.merge": "^4.6.2"
     },
     "devDependencies": {
-        "@lapidist/linting": "^2.70.2",
-        "@types/jest": "^26.0.20",
-        "@types/lodash.merge": "^4.6.6",
-        "cross-env": "^7.0.3",
-        "csstype": "^3.0.6",
-        "husky": "^6.0.0",
-        "jest": "^26.6.3",
-        "lint-staged": "^10.5.4",
-        "rimraf": "^3.0.2",
-        "ts-jest": "^26.5.1",
-        "typescript": "^4.1.5"
+        "@lapidist/linting": "2.106.0",
+        "@types/jest": "26.0.23",
+        "@types/lodash.merge": "4.6.6",
+        "cross-env": "7.0.3",
+        "csstype": "3.0.8",
+        "husky": "6.0.0",
+        "jest": "26.6.3",
+        "lint-staged": "10.5.4",
+        "rimraf": "3.0.2",
+        "ts-jest": "26.5.5",
+        "typescript": "4.2.4"
     },
     "engines": {
         "node": ">=14.0.0"
