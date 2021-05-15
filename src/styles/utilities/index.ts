@@ -72,5 +72,15 @@ export const withUtilities = (styles: Styles): string =>
             styleName: 'flexWrap',
             propertyName: 'flex-wrap',
             value: styles.flexWrap
+        },
+        {
+            styleName: 'listStyleType',
+            propertyName: 'list-style-type',
+            value: styles.listStyleType
+        },
+        {
+            styleName: 'listStylePosition',
+            propertyName: 'list-style-position',
+            value: styles.listStylePosition
         }
     ]);
