@@ -12,7 +12,7 @@ const getColorFromColorGroup = <T>(
     group: string,
     shade: string
 ): T => {
-    return (colors[group][shade] as unknown) as T;
+    return colors[group][shade] as unknown as T;
 };
 
 const isColorGroup = (
@@ -42,13 +42,13 @@ export const getProperty = <T>(
 
     if (value && propertyGroup && propertyGroup[value as string]) {
         if (Array.isArray(propertyGroup[value as string])) {
-            return (((propertyGroup[
-                value as string
-            ] as unknown) as Array<T>).join(', ') as unknown) as T;
+            return (propertyGroup[value as string] as unknown as Array<T>).join(
+                ', '
+            ) as unknown as T;
         }
 
-        return (propertyGroup[value as string] as unknown) as T;
+        return propertyGroup[value as string] as unknown as T;
     }
 
-    return (value as unknown) as T;
+    return value as unknown as T;
 };
