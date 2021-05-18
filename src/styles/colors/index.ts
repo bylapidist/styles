@@ -2,7 +2,7 @@ import * as CSS from 'csstype';
 import { Styles } from '../index';
 import { Theme } from '../../theme';
 import { filterToProperties } from '../../theme/filter-to-properties';
-import { getProperty } from '../../theme/get-property';
+import { getProperty } from '../../theme';
 
 export const withColors = (theme: Theme, styles: Styles): string =>
     filterToProperties([

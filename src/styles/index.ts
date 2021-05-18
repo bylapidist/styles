@@ -3,6 +3,7 @@ import * as CSS from 'csstype';
 import { ColorOrColorGroup, NumberOrString, ThemeObject } from '../theme';
 
 export * from './styles';
+export * from './merge-styles';
 
 export interface StyleMap {
     readonly styleName: string;
