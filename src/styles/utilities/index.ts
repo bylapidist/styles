@@ -34,6 +34,11 @@ export const withUtilities = (styles: Styles): string =>
             value: styles.textAlign
         },
         {
+            styleName: 'content',
+            propertyName: 'content',
+            value: styles.content
+        },
+        {
             styleName: 'cursor',
             propertyName: 'cursor',
             value: styles.cursor
@@ -82,5 +87,40 @@ export const withUtilities = (styles: Styles): string =>
             styleName: 'listStylePosition',
             propertyName: 'list-style-position',
             value: styles.listStylePosition
+        },
+        {
+            styleName: 'position',
+            propertyName: 'position',
+            value: styles.position
+        },
+        {
+            styleName: 'objectFit',
+            propertyName: 'object-fit',
+            value: styles.objectFit
+        },
+        {
+            styleName: 'objectPosition',
+            propertyName: 'object-position',
+            value: styles.objectPosition
+        },
+        {
+            styleName: 'top',
+            propertyName: 'top',
+            value: styles.top
+        },
+        {
+            styleName: 'bottom',
+            propertyName: 'bottom',
+            value: styles.bottom
+        },
+        {
+            styleName: 'right',
+            propertyName: 'right',
+            value: styles.right
+        },
+        {
+            styleName: 'left',
+            propertyName: 'left',
+            value: styles.left
         }
     ]);
