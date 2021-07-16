@@ -1,3 +1,8 @@
+/**
+ * @module
+ * Theme
+ */
+
 import * as CSS from 'csstype';
 
 export * from './get-property';

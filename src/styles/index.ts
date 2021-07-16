@@ -1,3 +1,8 @@
+/**
+ * @module
+ * Styles
+ */
+
 import * as CSS from 'csstype';
 
 import { ColorOrColorGroup, NumberOrString, ThemeObject } from '../theme';
