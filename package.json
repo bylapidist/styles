@@ -43,7 +43,7 @@
         "@types/jest": "27.4.1",
         "@types/lodash.merge": "4.6.6",
         "cross-env": "7.0.3",
-        "csstype": "3.0.10",
+        "csstype": "3.0.11",
         "husky": "7.0.4",
         "jest": "27.5.1",
         "lint-staged": "12.3.4",
