@@ -7,6 +7,91 @@ import { getProperty } from '../../theme';
 export const withLayout = (theme: Theme, styles: Styles): string =>
     filterToProperties([
         {
+            styleName: 'flex',
+            propertyName: 'flex',
+            value: styles.flex
+        },
+        {
+            styleName: 'flexWrap',
+            propertyName: 'flex-wrap',
+            value: styles.flexWrap
+        },
+        {
+            styleName: 'flexDirection',
+            propertyName: 'flex-direction',
+            value: styles.flexDirection
+        },
+        {
+            styleName: 'flexGrow',
+            propertyName: 'flex-grow',
+            value: styles.flexGrow
+        },
+        {
+            styleName: 'flexShrink',
+            propertyName: 'flex-shrink',
+            value: styles.flexShrink
+        },
+        {
+            styleName: 'flexFlow',
+            propertyName: 'flex-flow',
+            value: styles.flexFlow
+        },
+        {
+            styleName: 'flexBasis',
+            propertyName: 'flex-basis',
+            value: styles.flexBasis
+        },
+        {
+            styleName: 'justifyContent',
+            propertyName: 'justify-content',
+            value: styles.justifyContent
+        },
+        {
+            styleName: 'alignSelf',
+            propertyName: 'align-self',
+            value: styles.alignSelf
+        },
+        {
+            styleName: 'alignItems',
+            propertyName: 'align-items',
+            value: styles.alignItems
+        },
+        {
+            styleName: 'alignContent',
+            propertyName: 'align-content',
+            value: styles.alignContent
+        },
+        {
+            styleName: 'gap',
+            propertyName: 'gap',
+            value: styles.gap
+        },
+        {
+            styleName: 'sizeGap',
+            propertyName: 'gap',
+            value: getProperty<string>(theme, 'sizes', styles.sizeGap)
+        },
+        {
+            styleName: 'rowGap',
+            propertyName: 'rowGap',
+            value: styles.rowGap
+        },
+        {
+            styleName: 'sizeRowGap',
+            propertyName: 'row-gap',
+            value: getProperty<string>(theme, 'sizes', styles.sizeRowGap)
+        },
+        {
+            styleName: 'columnGap',
+            propertyName: 'column-gap',
+            value: styles.columnGap
+        },
+        {
+            styleName: 'sizeColumnGap',
+            propertyName: 'column-gap',
+            value: getProperty<string>(theme, 'sizes', styles.sizeColumnGap)
+        },
+        {
             styleName: 'margin',
             propertyName: 'margin',
             value: getProperty<CSS.Property.Margin<NumberOrString>>(
@@ -167,5 +252,10 @@ export const withLayout = (theme: Theme, styles: Styles): string =>
                 'sizes',
                 styles.paddingLeft
             )
+        },
+        {
+            styleName: 'order',
+            propertyName: 'order',
+            value: styles.order
         }
     ]);

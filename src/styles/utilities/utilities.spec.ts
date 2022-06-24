@@ -15,8 +15,6 @@ test('it renders the correct value', () => {
         borderBottomStyle: 'solid',
         borderLeftStyle: 'solid',
         display: 'flex',
-        flex: '1 1 0%',
-        flexWrap: 'wrap',
         listStyleType: 'decimal',
         listStylePosition: 'inside',
         content: "''",
@@ -30,7 +28,7 @@ test('it renders the correct value', () => {
 
     const values = withUtilities(styles);
     const expected =
-        "border-style: solid;border-top-style: dashed;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;text-align: center;content: '';cursor: pointer;overflow: auto;overflow-x: scroll;overflow-y: hidden;display: flex;flex: 1 1 0%;flex-wrap: wrap;list-style-type: decimal;list-style-position: inside;position: relative;object-fit: scale-down;object-position: 50% 50%;top: 0;bottom: 50%;right: auto;left: 2px;";
+        "border-style: solid;border-top-style: dashed;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;text-align: center;content: '';cursor: pointer;overflow: auto;overflow-x: scroll;overflow-y: hidden;display: flex;list-style-type: decimal;list-style-position: inside;position: relative;object-fit: scale-down;object-position: 50% 50%;top: 0;bottom: 50%;right: auto;left: 2px;";
 
     expect(values).toEqual(expected);
 });

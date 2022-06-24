@@ -30,12 +30,30 @@ const theme: Theme = {
 test('it renders the correct value', () => {
     const styles: Styles = {
         margin: '1',
-        paddingX: '1'
+        paddingX: '1',
+        order: '5',
+        flexDirection: 'row',
+        flexGrow: '4',
+        flexWrap: 'nowrap',
+        flexShrink: '3',
+        flexFlow: 'column wrap',
+        flexBasis: 'auto',
+        justifyContent: 'center',
+        flex: 'none',
+        alignSelf: 'flex-end',
+        alignItems: 'center',
+        alignContent: 'stretch',
+        gap: '10px 30px',
+        sizeGap: '6',
+        rowGap: '10px',
+        sizeRowGap: '6',
+        columnGap: '10px',
+        sizeColumnGap: '6'
     };
 
     const values = withLayout(theme, styles);
     const expected =
-        'margin: 0.25rem;padding-left: 0.25rem;padding-right: 0.25rem;';
+        'flex: none;flex-wrap: nowrap;flex-direction: row;flex-grow: 4;flex-shrink: 3;flex-flow: column wrap;flex-basis: auto;justify-content: center;align-self: flex-end;align-items: center;align-content: stretch;gap: 10px 30px;gap: 1.5rem;rowGap: 10px;row-gap: 1.5rem;column-gap: 10px;column-gap: 1.5rem;margin: 0.25rem;padding-left: 0.25rem;padding-right: 0.25rem;order: 5;';
 
     expect(values).toEqual(expected);
 });
