@@ -69,16 +69,6 @@ export const withUtilities = (styles: Styles): string =>
             value: styles.display
         },
         {
-            styleName: 'flex',
-            propertyName: 'flex',
-            value: styles.flex
-        },
-        {
-            styleName: 'flexWrap',
-            propertyName: 'flex-wrap',
-            value: styles.flexWrap
-        },
-        {
             styleName: 'listStyleType',
             propertyName: 'list-style-type',
             value: styles.listStyleType

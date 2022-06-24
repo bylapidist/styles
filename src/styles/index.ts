@@ -51,6 +51,9 @@ export interface Styles extends CSSBaseProperties {
     readonly sizeMaxHeight?: CSS.Property.MaxHeight<NumberOrString>;
     readonly containerHeight?: CSS.Property.Height<NumberOrString>;
     readonly sizeHeight?: CSS.Property.Height<NumberOrString>;
+    readonly sizeGap?: CSS.Property.Gap<NumberOrString>;
+    readonly sizeRowGap?: CSS.Property.RowGap<NumberOrString>;
+    readonly sizeColumnGap?: CSS.Property.ColumnGap<NumberOrString>;
     readonly textColor?: ColorOrColorGroup;
     readonly marginX?:
         | CSS.Property.MarginLeft<NumberOrString>
