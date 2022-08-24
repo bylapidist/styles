@@ -40,7 +40,7 @@
     },
     "devDependencies": {
         "@lapidist/linting": "2.134.6",
-        "@types/jest": "28.1.7",
+        "@types/jest": "28.1.8",
         "@types/lodash.merge": "4.6.7",
         "cross-env": "7.0.3",
         "csstype": "3.1.0",
