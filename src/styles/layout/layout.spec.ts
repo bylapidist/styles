@@ -48,12 +48,14 @@ test('it renders the correct value', () => {
         rowGap: '10px',
         sizeRowGap: '6',
         columnGap: '10px',
-        sizeColumnGap: '6'
+        sizeColumnGap: '6',
+        gridTemplateColumns: 'repeat(min-fit, 1fr)',
+        gridTemplateRows: 'repeat(min-fit, 1fr)'
     };
 
     const values = withLayout(theme, styles);
     const expected =
-        'flex: none;flex-wrap: nowrap;flex-direction: row;flex-grow: 4;flex-shrink: 3;flex-flow: column wrap;flex-basis: auto;justify-content: center;align-self: flex-end;align-items: center;align-content: stretch;gap: 10px 30px;gap: 1.5rem;rowGap: 10px;row-gap: 1.5rem;column-gap: 10px;column-gap: 1.5rem;margin: 0.25rem;padding-left: 0.25rem;padding-right: 0.25rem;order: 5;';
+        'flex: none;flex-wrap: nowrap;flex-direction: row;flex-grow: 4;flex-shrink: 3;flex-flow: column wrap;flex-basis: auto;justify-content: center;align-self: flex-end;align-items: center;align-content: stretch;gap: 10px 30px;gap: 1.5rem;rowGap: 10px;row-gap: 1.5rem;column-gap: 10px;column-gap: 1.5rem;margin: 0.25rem;padding-left: 0.25rem;padding-right: 0.25rem;order: 5;grid-template-columns: repeat(min-fit, 1fr);grid-template-rows: repeat(min-fit, 1fr);';
 
     expect(values).toEqual(expected);
 });

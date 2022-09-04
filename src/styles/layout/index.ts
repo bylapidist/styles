@@ -257,5 +257,15 @@ export const withLayout = (theme: Theme, styles: Styles): string =>
             styleName: 'order',
             propertyName: 'order',
             value: styles.order
+        },
+        {
+            styleName: 'gridTemplateColumns',
+            propertyName: 'grid-template-columns',
+            value: styles.gridTemplateColumns
+        },
+        {
+            styleName: 'gridTemplateRows',
+            propertyName: 'grid-template-rows',
+            value: styles.gridTemplateRows
         }
     ]);
