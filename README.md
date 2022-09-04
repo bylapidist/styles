@@ -5,7 +5,7 @@
 ![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/bylapidist/styles/dev/typescript)
 [![codecov](https://codecov.io/gh/bylapidist/styles/branch/master/graph/badge.svg)](https://codecov.io/gh/bylapidist/styles)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d28f67acb582d5705333/maintainability)](https://codeclimate.com/github/bylapidist/styles/maintainability)
-[![Node](https://img.shields.io/node/v/@lapidist/styles)](https://www.npmjs.com/package/@lapidist/components)
+[![Node](https://img.shields.io/node/v/@lapidist/styles)](https://www.npmjs.com/package/@lapidist/styles)
 [![GitHub Issues](https://img.shields.io/github/issues/bylapidist/styles.svg?style=flat)](https://github.com/bylapidist/styles/issues)
 ![GitHub](https://img.shields.io/github/license/bylapidist/styles)
 [![GitHub Release](https://img.shields.io/github/release/bylapidist/styles.svg?style=flat)](https://github.com/bylapidist/styles/releases)
