@@ -1,5 +1,7 @@
 import * as CSS from 'csstype';
 
+export type Themes = 'light' | 'dark';
+
 export type NumberOrString = string | number | 0 | undefined;
 
 export type ThemeCategory<T, K> = {

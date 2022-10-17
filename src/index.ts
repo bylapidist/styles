@@ -2,15 +2,29 @@
 import fs from 'fs-extra';
 import { transformThemeToCssVars } from './transform';
 
-import defaultTheme from './themes/light';
+import lightTheme from './themes/light';
+import darkTheme from './themes/dark';
 
 const CSS_PATH = './dist/css';
 
+const themes = [
+    {
+        name: 'light',
+        theme: lightTheme
+    },
+    {
+        name: 'dark',
+        theme: darkTheme
+    }
+];
+
 fs.ensureDir(CSS_PATH).then(async () =>
-    fs.writeFileSync(
-        `${CSS_PATH}/light.css`,
-        transformThemeToCssVars(defaultTheme)
-    )
+    themes.forEach(({ name, theme }) => {
+        fs.writeFileSync(
+            `${CSS_PATH}/${name}.css`,
+            transformThemeToCssVars(name, theme)
+        );
+    })
 );
 
 export * from './types';
