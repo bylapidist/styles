@@ -1,6 +1,6 @@
 import { Theme, ThemeCategory } from './types';
 import {
-    formatCssVars,
+    formatTheme,
     transformCategoryToCssVars,
     transformThemeToCssVars
 } from './transform';
@@ -10,17 +10,17 @@ describe('formatCssVars', () => {
         variants: ['variant1', 'variant2'],
         values: ['value1', 'value2']
     };
-    const vars = transformCategoryToCssVars('test', category);
 
-    test('it formats css vars', () => {
-        expect(formatCssVars(vars)).toBe(`:root {
-    --test__variant1: value1;
-    --test__variant2: value2;
+    test.each(['key1', 'key2'])('it works with keys', (key) => {
+        const vars = transformCategoryToCssVars(key, category);
+        expect(formatTheme('themeName', vars)).toBe(`.theme--themeName {
+    --${key}__variant1: value1;
+    --${key}__variant2: value2;
 }`);
     });
 
     test('it returns empty string if vars is empty array', () => {
-        expect(formatCssVars([])).toBe('');
+        expect(formatTheme('themeName', [])).toBe('');
     });
 });
 
@@ -53,10 +53,10 @@ describe('transformThemeToCssVars', () => {
             values: ['value1', 'value2']
         };
         expect(
-            transformThemeToCssVars({
+            transformThemeToCssVars('themeName', {
                 test: category
             } as unknown as Theme)
-        ).toBe(`:root {
+        ).toBe(`.theme--themeName {
     --test__variant1: value1;
     --test__variant2: value2;
 }`);

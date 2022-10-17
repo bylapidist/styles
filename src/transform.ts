@@ -1,8 +1,8 @@
 import { NumberOrString, Theme, ThemeCategory } from './types';
 
-export const formatCssVars = (vars: string[]): string => {
+export const formatTheme = (name: string, vars: string[]): string => {
     if (!vars.length) return '';
-    return `:root {\n    ${vars.join('\n    ')}\n}`;
+    return `.theme--${name} {\n    ${vars.join('\n    ')}\n}`;
 };
 
 export const transformCategoryToCssVars = (
@@ -21,7 +21,7 @@ export const transformCategoryToCssVars = (
     return vars;
 };
 
-export const transformThemeToCssVars = (theme: Theme) => {
+export const transformThemeToCssVars = (name: string, theme: Theme) => {
     let vars: string[] = [];
 
     Object.keys(theme).forEach(
@@ -32,5 +32,5 @@ export const transformThemeToCssVars = (theme: Theme) => {
             ])
     );
 
-    return formatCssVars(vars);
+    return formatTheme(name, vars);
 };
