@@ -149,7 +149,7 @@ export const FRACTIONS: Variant<Fraction> = {
 };
 
 export const COLORS: Variant<Color> = {
-    lighest: 'lightest',
+    lightest: 'lightest',
     light: 'light',
     dark: 'dark',
     darkest: 'darkest'

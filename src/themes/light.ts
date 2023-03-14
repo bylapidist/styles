@@ -40,7 +40,7 @@ const theme: Theme = {
     'font-family': {
         variants: [...Object.values(FONT_FAMILIES)],
         values: [
-            'Montserrat, sans-serif',
+            'Inter, sans-serif',
             'Georgia, Cambria, serif',
             'Consolas, Courier, monospace'
         ]
