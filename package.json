@@ -36,7 +36,7 @@
         "prepublishOnly": "npm run build"
     },
     "dependencies": {
-        "fs-extra": "11.1.0"
+        "fs-extra": "11.1.1"
     },
     "devDependencies": {
         "@lapidist/linting": "3.3.1",
