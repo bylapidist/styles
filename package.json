@@ -39,7 +39,7 @@
         "fs-extra": "11.1.1"
     },
     "devDependencies": {
-        "@lapidist/linting": "3.3.1",
+        "@lapidist/linting": "3.4.4",
         "@types/fs-extra": "11.0.1",
         "@types/jest": "29.5.0",
         "cross-env": "7.0.3",
