@@ -11,7 +11,8 @@ import {
     Size,
     LetterSpacing,
     LineHeight,
-    FontWeight
+    FontWeight,
+    Transition
 } from './types';
 
 export const BREAKPOINTS: Variant<Breakpoint> = {
@@ -153,4 +154,11 @@ export const COLORS: Variant<Color> = {
     light: 'light',
     dark: 'dark',
     darkest: 'darkest'
+};
+
+export const TRANSITIONS: Variant<Transition> = {
+    'ease-in-slow': 'ease-in-slow',
+    'ease-out-slow': 'ease-out-slow',
+    'ease-in-fast': 'ease-in-fast',
+    'ease-out-fast': 'ease-out-fast'
 };

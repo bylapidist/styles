@@ -121,6 +121,12 @@ export type Fraction =
 
 export type Color = 'lightest' | 'light' | 'dark' | 'darkest';
 
+export type Transition =
+    | 'ease-in-slow'
+    | 'ease-out-slow'
+    | 'ease-in-fast'
+    | 'ease-out-fast';
+
 export type Theme = {
     readonly breakpoint: ThemeCategory<Breakpoint, NumberOrString>;
     readonly 'font-size': ThemeCategory<FontSize, CSS.Property.FontSize>;
@@ -142,10 +148,12 @@ export type Theme = {
     >;
     readonly elevation: ThemeCategory<Elevation, CSS.Property.BoxShadow>;
     readonly fraction: ThemeCategory<Fraction, CSS.Property.Width>;
+    readonly 'color-core': ThemeCategory<Color, CSS.Property.Color>;
     readonly 'color-grey': ThemeCategory<Color, CSS.Property.Color>;
     readonly 'color-primary': ThemeCategory<Color, CSS.Property.Color>;
     readonly 'color-secondary': ThemeCategory<Color, CSS.Property.Color>;
     readonly 'color-tertiary': ThemeCategory<Color, CSS.Property.Color>;
     readonly 'color-danger': ThemeCategory<Color, CSS.Property.Color>;
+    readonly transition: ThemeCategory<Transition, CSS.Property.Transition>;
     [K: string]: ThemeCategory<unknown, NumberOrString>;
 };

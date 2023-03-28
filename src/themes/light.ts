@@ -11,7 +11,8 @@ import {
     LETTER_SPACINGS,
     ELEVATIONS,
     FRACTIONS,
-    SIZES
+    SIZES,
+    TRANSITIONS
 } from '../variants';
 
 const theme: Theme = {
@@ -56,6 +57,10 @@ const theme: Theme = {
     'border-width': {
         variants: [...Object.values(BORDER_WIDTHS)],
         values: ['0', '1px', '2px', '3px', '4px']
+    },
+    'color-core': {
+        variants: [...Object.values(COLORS)],
+        values: ['#ffffff', '#f2f2f2', '#000000', '#101010']
     },
     'color-primary': {
         variants: [...Object.values(COLORS)],
@@ -148,6 +153,15 @@ const theme: Theme = {
             '16rem',
             '32rem',
             '40rem'
+        ]
+    },
+    transition: {
+        variants: [...Object.values(TRANSITIONS)],
+        values: [
+            '0.1s cubic-bezier(0.4, 0, 1, 1) 0s',
+            '0.1s cubic-bezier(0.39, 0.58, 0.57, 1) 0s',
+            '0.07s cubic-bezier(0.4, 0, 1, 1) 0s',
+            '0.07s cubic-bezier(0.39, 0.58, 0.57, 1) 0s'
         ]
     }
 };

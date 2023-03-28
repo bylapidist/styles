@@ -4,6 +4,10 @@ import lightTheme from './light';
 
 const theme: Theme = {
     ...lightTheme,
+    'color-core': {
+        variants: [...Object.values(COLORS)],
+        values: ['#ffffff', '#f2f2f2', '#000000', '#101010'].reverse()
+    },
     'color-primary': {
         variants: [...Object.values(COLORS)],
         values: ['#9bfff8', '#4ad6d8', '#17a3a5', '#135f61'].reverse()
