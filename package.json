@@ -41,7 +41,7 @@
     "devDependencies": {
         "@lapidist/linting": "3.5.1",
         "@types/fs-extra": "11.0.1",
-        "@types/jest": "29.5.1",
+        "@types/jest": "29.5.2",
         "cross-env": "7.0.3",
         "csstype": "3.1.2",
         "husky": "8.0.3",
