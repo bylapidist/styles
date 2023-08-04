@@ -1,7 +1,7 @@
 {
     "name": "@lapidist/styles",
     "version": "0.0.0",
-    "description": "Lapidist styles",
+    "description": "Lapidist shared styles and design tokens",
     "author": "Brett Dorrans <hello@lapidist.net>",
     "license": "MIT",
     "repository": {
@@ -15,56 +15,25 @@
     "publishConfig": {
         "access": "public"
     },
-    "main": "dist/es5",
-    "typings": "dist/es5",
+    "main": "dist",
+    "typings": "dist",
     "keywords": [
         "lapidist",
-        "styles"
+        "styles",
+        "style-dictionary"
     ],
     "scripts": {
-        "lint": "eslint . --ext js,ts,tsx",
-        "fix": "eslint --fix . --ext js,ts,tsx",
-        "watch": "cross-env NODE_ENV=development tsc -w",
-        "watch:tests": "cross-env NODE_ENV=test jest --watch",
         "clean": "rimraf dist",
-        "build": "npm run clean && npm run build:es5 && npm run build:css",
-        "build:es5": "cross-env NODE_ENV=production tsc --outDir dist/es5 -p tsconfig.json",
-        "build:css": "node ./dist/es5/index.js",
-        "build:docs": "typedoc src/index.ts",
-        "test": "npm run lint && npm run test:unit",
-        "test:unit": "cross-env NODE_ENV=test jest --coverage --passWithNoTests",
+        "build": "npm run clean && npm run build:style-dictionary",
+        "build:style-dictionary": "style-dictionary clean --config sd.config.cjs && style-dictionary build --config sd.config.cjs",
         "prepublishOnly": "npm run build"
     },
-    "dependencies": {
-        "fs-extra": "11.1.1"
-    },
     "devDependencies": {
-        "@lapidist/linting": "3.9.12",
-        "@types/fs-extra": "11.0.1",
-        "@types/jest": "29.5.3",
-        "cross-env": "7.0.3",
-        "csstype": "3.1.2",
-        "husky": "8.0.3",
-        "jest": "29.6.1",
-        "lint-staged": "13.2.3",
         "rimraf": "5.0.1",
-        "ts-jest": "29.1.1",
-        "typedoc": "0.24.8",
+        "style-dictionary": "^3.8.0",
         "typescript": "5.1.6"
     },
     "engines": {
         "node": "^18.0.0"
-    },
-    "browserslist": [
-        "> 0.55%",
-        "not IE 11",
-        "not IE_Mob 11",
-        "not Op_Mini all",
-        "not Safari < 12"
-    ],
-    "husky": {
-        "hooks": {
-            "pre-commit": "tsc --noEmit && lint-staged"
-        }
     }
 }

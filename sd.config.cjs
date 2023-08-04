@@ -1,0 +1,29 @@
+module.exports = {
+    source: ['tokens/**/*.json'],
+    platforms: {
+        tsModule: {
+            transformGroup: 'js',
+            buildPath: 'dist/',
+            files: [
+                {
+                    destination: 'index.js',
+                    format: 'javascript/es6'
+                },
+                {
+                    destination: 'index.d.ts',
+                    format: 'typescript/es6-declarations'
+                }
+            ]
+        },
+        css: {
+            transformGroup: 'css',
+            buildPath: 'dist/',
+            files: [
+                {
+                    destination: 'index.css',
+                    format: 'css/variables'
+                }
+            ]
+        }
+    }
+};
