@@ -5,5 +5,9 @@ sd.config.cjs
 .editorconfig
 .gitignore
 .npmignore
+.eslintignore
+.lintstagedrc
+.prettierrc.cjs
+.eslintrc.cjs
 .idea/
 *.tgz

@@ -1,5 +1,5 @@
 module.exports = {
-    source: ['tokens/**/*.json'],
+    source: ['tokens/**/*.cjs'],
     platforms: {
         tsModule: {
             transformGroup: 'js',
