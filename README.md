@@ -2,7 +2,6 @@
 
 ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@lapidist/styles)
 [![npm](https://img.shields.io/npm/v/@lapidist/styles)](https://www.npmjs.com/package/@lapidist/styles)
-![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/bylapidist/styles/dev/typescript)
 [![Node](https://img.shields.io/node/v/@lapidist/styles)](https://www.npmjs.com/package/@lapidist/styles)
 [![GitHub Issues](https://img.shields.io/github/issues/bylapidist/styles.svg?style=flat)](https://github.com/bylapidist/styles/issues)
 ![GitHub](https://img.shields.io/github/license/bylapidist/styles)
