@@ -3,8 +3,6 @@
 ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@lapidist/styles)
 [![npm](https://img.shields.io/npm/v/@lapidist/styles)](https://www.npmjs.com/package/@lapidist/styles)
 ![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/bylapidist/styles/dev/typescript)
-[![codecov](https://codecov.io/gh/bylapidist/styles/branch/master/graph/badge.svg)](https://codecov.io/gh/bylapidist/styles)
-[![Maintainability](https://api.codeclimate.com/v1/badges/d28f67acb582d5705333/maintainability)](https://codeclimate.com/github/bylapidist/styles/maintainability)
 [![Node](https://img.shields.io/node/v/@lapidist/styles)](https://www.npmjs.com/package/@lapidist/styles)
 [![GitHub Issues](https://img.shields.io/github/issues/bylapidist/styles.svg?style=flat)](https://github.com/bylapidist/styles/issues)
 ![GitHub](https://img.shields.io/github/license/bylapidist/styles)
@@ -14,6 +12,8 @@
 ## Getting Started
 
 `@lapidist/styles` is available as an [npm package](https://www.npmjs.com/package/@lapidist/styles).
+
+This repository contains design tokens defined using [Style Dictionary](https://github.com/amzn/style-dictionary).
 
 See [https://components.lapidist.net](https://components.lapidist.net) for the full documentation.
 
