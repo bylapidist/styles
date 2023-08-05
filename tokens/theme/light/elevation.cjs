@@ -14,6 +14,6 @@ module.exports = {
         },
         highest: {
             value: '0 2px 6px rgba(0, 0, 0, 0.18), -15px 20px 20px rgba(0, 0, 0, 0.04), 15px -5px 20px rgba(0, 0, 0, 0.04)'
-        },
+        }
     }
 };
