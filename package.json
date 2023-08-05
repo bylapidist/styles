@@ -23,17 +23,25 @@
         "style-dictionary"
     ],
     "scripts": {
+        "lint": "eslint . --ext js,cjs",
+        "fix": "eslint --fix . --ext js,cjs",
         "clean": "rimraf dist",
         "build": "npm run clean && npm run build:style-dictionary",
         "build:style-dictionary": "style-dictionary clean --config sd.config.cjs && style-dictionary build --config sd.config.cjs",
         "prepublishOnly": "npm run build"
     },
     "devDependencies": {
+        "@lapidist/linting": "^3.9.21",
+        "lint-staged": "^13.2.3",
         "rimraf": "5.0.1",
-        "style-dictionary": "^3.8.0",
-        "typescript": "5.1.6"
+        "style-dictionary": "^3.8.0"
     },
     "engines": {
         "node": "^18.0.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
     }
 }
