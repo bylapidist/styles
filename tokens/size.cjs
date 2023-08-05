@@ -4,61 +4,61 @@ module.exports = {
             value: '0'
         },
         1: {
-            value: '1rem'
+            value: '0.25rem'
         },
         2: {
-            value: '2rem'
+            value: '0.5rem'
         },
         3: {
-            value: '3rem'
+            value: '0.75rem'
         },
         4: {
-            value: '4rem'
+            value: '1rem'
         },
         5: {
-            value: '5rem'
+            value: '1.25rem'
         },
         6: {
-            value: '6rem'
+            value: '1.5rem'
         },
         8: {
-            value: '8rem'
+            value: '2rem'
         },
         10: {
-            value: '10rem'
+            value: '2.5rem'
         },
         12: {
-            value: '12rem'
+            value: '3rem'
         },
         16: {
-            value: '16rem'
+            value: '4rem'
         },
         20: {
-            value: '20rem'
+            value: '5rem'
         },
         24: {
-            value: '24rem'
+            value: '6rem'
         },
         32: {
-            value: '32rem'
+            value: '8rem'
         },
         40: {
-            value: '40rem'
+            value: '10rem'
         },
         48: {
-            value: '48rem'
+            value: '12rem'
         },
         56: {
-            value: '56rem'
+            value: '14rem'
         },
         64: {
-            value: '64rem'
+            value: '16rem'
         },
         128: {
-            value: '128rem'
+            value: '32rem'
         },
         256: {
-            value: '256rem'
+            value: '40rem'
         }
     }
 };
