@@ -2,86 +2,86 @@ module.exports = {
     color: {
         core: {
             darkest: {
-                value: '#101010'
+                value: '#ffffff'
             },
             dark: {
-                value: '#000000'
-            },
-            light: {
                 value: '#f2f2f2'
             },
+            light: {
+                value: '#000000'
+            },
             lightest: {
-                value: '#ffffff'
+                value: '#101010'
             }
         },
         primary: {
             darkest: {
-                value: '#135f61'
+                value: '#9bfff8'
             },
             dark: {
-                value: '#17a3a5'
-            },
-            light: {
                 value: '#4ad6d8'
             },
+            light: {
+                value: '#17a3a5'
+            },
             lightest: {
-                value: '#9bfff8'
+                value: '#135f61'
             }
         },
         secondary: {
             darkest: {
-                value: '#937032'
+                value: '#fdffb5'
             },
             dark: {
-                value: '#ebc764'
-            },
-            light: {
                 value: '#fff08f'
             },
+            light: {
+                value: '#ebc764'
+            },
             lightest: {
-                value: '#fdffb5'
+                value: '#937032'
             }
         },
         neutral: {
             darkest: {
-                value: '#292b3e'
+                value: '#fafafa'
             },
             dark: {
-                value: '#73748b'
-            },
-            light: {
                 value: '#d4d4d4'
             },
+            light: {
+                value: '#73748b'
+            },
             lightest: {
-                value: '#fafafa'
+                value: '#292b3e'
             }
         },
         success: {
             darkest: {
-                value: '#548230'
+                value: '#e2f7c9'
             },
             dark: {
-                value: '#72af5d'
-            },
-            light: {
                 value: '#a7d981'
             },
+            light: {
+                value: '#72af5d'
+            },
             lightest: {
-                value: '#e2f7c9'
+                value: '#548230'
             }
         },
         danger: {
             darkest: {
-                value: '#810000'
+                value: '#ff848B'
             },
             dark: {
-                value: '#b41e25'
-            },
-            light: {
                 value: '#e75158'
             },
+            light: {
+                value: '#b41e25'
+            },
             lightest: {
-                value: '#ff848B'
+                value: '#810000'
             }
         }
     }
