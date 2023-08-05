@@ -27,7 +27,7 @@
         "fix": "eslint --fix . --ext js,cjs",
         "clean": "rimraf dist",
         "build": "npm run clean && npm run build:style-dictionary",
-        "build:style-dictionary": "style-dictionary clean --config sd.config.cjs && style-dictionary build --config sd.config.cjs",
+        "build:style-dictionary": "node build.cjs",
         "prepublishOnly": "npm run build"
     },
     "devDependencies": {
