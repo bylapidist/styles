@@ -4,16 +4,16 @@ module.exports = {
             value: 'none'
         },
         lowest: {
-            value: '0 2px 3px rgba(0, 0, 0, 0.1)'
+            value: '0 2px 3px oklch(0 0 0 / 0.1)'
         },
         lower: {
-            value: '0 2px 4px rgba(0, 0, 0, 0.12), 0 10px 13px rgba(0, 0, 0, 0.02), 0 -10px 13px rgba(0, 0, 0, 0.02)'
+            value: '0 2px 4px oklch(0 0 0 / 0.12), 0 10px 13px oklch(0 0 0 / 0.02), 0 -10px 13px oklch(0 0 0 / 0.02)'
         },
         higher: {
-            value: '0 2px 5px rgba(0, 0, 0, 0.16), -10px 15px 15px rgba(0, 0, 0, 0.03), 10px 0px 15px rgba(0, 0, 0, 0.03)'
+            value: '0 2px 5px oklch(0 0 0 / 0.16), -10px 15px 15px oklch(0 0 0 / 0.03), 10px 0px 15px oklch(0 0 0 / 0.03)'
         },
         highest: {
-            value: '0 2px 6px rgba(0, 0, 0, 0.18), -15px 20px 20px rgba(0, 0, 0, 0.04), 15px -5px 20px rgba(0, 0, 0, 0.04)'
+            value: '0 2px 6px oklch(0 0 0 / 0.18), -15px 20px 20px oklch(0 0 0 / 0.04), 15px -5px 20px oklch(0 0 0 / 0.04)'
         }
     }
 };
