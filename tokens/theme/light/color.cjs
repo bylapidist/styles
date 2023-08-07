@@ -1,87 +1,87 @@
 module.exports = {
-    color: {
+    colour: {
         core: {
             lightest: {
-                value: '#ffffff'
+                value: 'oklch(1 0 89.876)'
             },
             light: {
-                value: '#f2f2f2'
+                value: 'oklch(0.961 0 89.876)'
             },
             dark: {
-                value: '#000000'
+                value: 'oklch(0 0 0)'
             },
             darkest: {
-                value: '#101010'
+                value: 'oklch(0.173 0 89.876)'
             }
         },
         primary: {
             lightest: {
-                value: '#9bfff8'
+                value: 'oklch(0.937 0.095 189.934)'
             },
             light: {
-                value: '#4ad6d8'
+                value: 'oklch(0.803 0.118 196.442)'
             },
             dark: {
-                value: '#17a3a5'
+                value: 'oklch(0.65 0.107 196.438)'
             },
             darkest: {
-                value: '#135f61'
+                value: 'oklch(0.443 0.069 197.652)'
             }
         },
         secondary: {
             lightest: {
-                value: '#fdffb5'
+                value: 'oklch(0.981 0.093 109.305)'
             },
             light: {
-                value: '#fff08f'
+                value: 'oklch(0.947 0.119 100.622)'
             },
             dark: {
-                value: '#ebc764'
+                value: 'oklch(0.841 0.125 89.565)'
             },
             darkest: {
-                value: '#937032'
+                value: 'oklch(0.567 0.091 79.395)'
             }
         },
         neutral: {
             lightest: {
-                value: '#fafafa'
+                value: 'oklch(0.985 0 89.876)'
             },
             light: {
-                value: '#d4d4d4'
+                value: 'oklch(0.8699 0 0)'
             },
             dark: {
-                value: '#73748b'
+                value: 'oklch(0.5663 0.0353 283.24)'
             },
             darkest: {
-                value: '#292b3e'
+                value: 'oklch(0.2959 0.0346 279.4)'
             }
         },
         success: {
             lightest: {
-                value: '#e2f7c9'
+                value: 'oklch(0.949 0.0643 127.58)'
             },
             light: {
-                value: '#a7d981'
+                value: 'oklch(0.8297 0.1274 132.71)'
             },
             dark: {
-                value: '#72af5d'
+                value: 'oklch(0.6927 0.1301 138.13)'
             },
             darkest: {
-                value: '#548230'
+                value: 'oklch(0.5549 0.1236 133.65)'
             }
         },
         danger: {
             lightest: {
-                value: '#ff848B'
+                value: 'oklch(0.7527 0.1494 17.76)'
             },
             light: {
-                value: '#e75158'
+                value: 'oklch(0.6404 0.1854 21.43)'
             },
             dark: {
-                value: '#b41e25'
+                value: 'oklch(0.4981 0.1838 25.316)'
             },
             darkest: {
-                value: '#810000'
+                value: 'oklch(0.3788 0.1554 29.234)'
             }
         }
     }
