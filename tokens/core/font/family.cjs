@@ -1,8 +1,11 @@
 module.exports = {
     font: {
         family: {
-            sans: {
+            body: {
                 value: 'Montserrat, sans-serif'
+            },
+            heading: {
+                value: `'Albert Sans', sans-serif`
             },
             serif: {
                 value: 'Georgia, Cambria, serif'
