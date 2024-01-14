@@ -31,10 +31,10 @@
         "prepublishOnly": "npm run build"
     },
     "devDependencies": {
-        "@lapidist/linting": "^3.9.21",
-        "lint-staged": "^15.0.0",
+        "@lapidist/linting": "^3.15.1",
+        "lint-staged": "^15.2.0",
         "rimraf": "5.0.5",
-        "style-dictionary": "^3.8.0"
+        "style-dictionary": "^3.9.1"
     },
     "engines": {
         "node": "^20.0.0"
