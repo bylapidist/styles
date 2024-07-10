@@ -33,7 +33,7 @@
     "devDependencies": {
         "@lapidist/linting": "^3.15.1",
         "lint-staged": "^15.2.0",
-        "rimraf": "5.0.9",
+        "rimraf": "6.0.0",
         "style-dictionary": "^3.9.1"
     },
     "engines": {
