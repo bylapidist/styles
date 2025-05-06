@@ -34,7 +34,7 @@
         "@lapidist/linting": "^3.15.1",
         "lint-staged": "^15.2.0",
         "rimraf": "6.0.1",
-        "style-dictionary": "^3.9.1"
+        "style-dictionary": "^4.0.0"
     },
     "engines": {
         "node": "^20.0.0"
