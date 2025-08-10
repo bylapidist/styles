@@ -31,7 +31,7 @@
         "prepublishOnly": "npm run build"
     },
     "devDependencies": {
-        "@lapidist/linting": "^3.15.1",
+        "@lapidist/linting": "^4.0.0",
         "lint-staged": "^15.2.0",
         "rimraf": "6.0.1",
         "style-dictionary": "^3.9.1"
